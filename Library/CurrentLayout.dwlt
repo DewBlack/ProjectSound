@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -196,19 +196,15 @@ MonoBehaviour:
 =======
     width: 1536
     height: 731
-  m_MinSize: {x: 583, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 579, y: 471}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 979
 --- !u!114 &9
 >>>>>>> parent of a5bfb01... Primer Nivel
 =======
   controlID: 115
-=======
-  controlID: 11
->>>>>>> parent of c9ca8bd... Animacion Minimalista
 --- !u!114 &6
 >>>>>>> parent of 5d2fd13... Mas cosas
 MonoBehaviour:
@@ -243,19 +239,15 @@ MonoBehaviour:
     width: 1185
 >>>>>>> parent of 5d2fd13... Mas cosas
     height: 731
-  m_MinSize: {x: 306, y: 492}
+  m_MinSize: {x: 304, y: 471}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 177
 --- !u!114 &10
 >>>>>>> parent of a5bfb01... Primer Nivel
 =======
   controlID: 116
-=======
-  controlID: 12
->>>>>>> parent of c9ca8bd... Animacion Minimalista
 --- !u!114 &7
 >>>>>>> parent of 5d2fd13... Mas cosas
 MonoBehaviour:
@@ -290,19 +282,15 @@ MonoBehaviour:
     width: 1185
 >>>>>>> parent of 5d2fd13... Mas cosas
     height: 460
-  m_MinSize: {x: 306, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 304, y: 200}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 178
 --- !u!114 &11
 >>>>>>> parent of a5bfb01... Primer Nivel
 =======
   controlID: 117
-=======
-  controlID: 107
->>>>>>> parent of c9ca8bd... Animacion Minimalista
 --- !u!114 &8
 >>>>>>> parent of 5d2fd13... Mas cosas
 MonoBehaviour:
@@ -336,8 +324,8 @@ MonoBehaviour:
 =======
     width: 267
     height: 460
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -376,7 +364,6 @@ MonoBehaviour:
     width: 918
     height: 460
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
@@ -399,18 +386,13 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
-=======
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 16}
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 3
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 3
 --- !u!114 &10
 >>>>>>> parent of 5d2fd13... Mas cosas
 MonoBehaviour:
@@ -537,8 +519,8 @@ MonoBehaviour:
 =======
     width: 351
     height: 731
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -591,23 +573,19 @@ MonoBehaviour:
 =======
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 9e7af5ffa07af5ff0efbffff16fbffff1cfbffff2afbffff32fbffff36fbffff3afbffff8cfbffffdcfbffffdefbffffe4fbffff00000000
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    m_ExpandedIDs: 66b3f1ffe6fcfdff7c08feffb416feff5423fefff23dfefffc4cfeff306cfeff2e78feff408efeff9897feffecd5ffffe4fbffff00000000
->>>>>>> parent of c9ca8bd... Animacion Minimalista
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Cuerpo
-      m_OriginalName: Cuerpo
+      m_Name: Huesos
+      m_OriginalName: Huesos
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -382126
+      m_UserData: -1058
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -675,7 +653,6 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     m_Target: {x: 6.337937, y: 0.7909156, z: 0.10546875}
     speed: 2
     m_Value: {x: 6.337937, y: 0.7909156, z: 0.10546875}
@@ -689,11 +666,6 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.1523871, y: -0.51848257, z: 0.65351564}
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    m_Target: {x: -1.3707293, y: -0.6777979, z: 0.0420869}
-    speed: 2
-    m_Value: {x: -1.3707293, y: -0.6777979, z: 0.0420869}
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -727,7 +699,6 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     m_Target: 11.368944
     speed: 2
     m_Value: 11.368944
@@ -741,11 +712,6 @@ MonoBehaviour:
     speed: 2
     m_Value: 7.811311
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    m_Target: 6.060735
-    speed: 2
-    m_Value: 6.060735
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -835,7 +801,6 @@ MonoBehaviour:
 >>>>>>> parent of 5d2fd13... Mas cosas
     y: 92.8
     width: 914
-<<<<<<< HEAD
     height: 439
 >>>>>>> parent of a5bfb01... Primer Nivel
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -878,13 +843,6 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-=======
-    height: 423
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_ViewTransforms:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -934,17 +892,17 @@ MonoBehaviour:
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -365.6
-    m_HBaseRangeMax: 365.6
-    m_VBaseRangeMin: -168.8
-    m_VBaseRangeMax: 168.8
+    m_HBaseRangeMin: -760.8
+    m_HBaseRangeMax: 760.8
+    m_VBaseRangeMin: -432
+    m_VBaseRangeMax: 432
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -964,20 +922,20 @@ MonoBehaviour:
       y: 17
       width: 914
       height: 422
-    m_Scale: {x: 2.143852, y: 2.143852}
-    m_Translation: {x: 536.64307, y: 197.41881}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 457, y: 210.79199}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -250.31721
-      y: -92.08602
-      width: 426.3354
-      height: 196.84195
+      x: -457
+      y: -210.79199
+      width: 914
+      height: 422
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.48842594
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1142.5, y: 548.75}
@@ -1060,7 +1018,6 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     m_SelectedIDs: ae0a0000
     m_LastClickedID: 2734
     m_ExpandedIDs: 00000000ae0a0000000c0000ae0d0000400e00004231000000ca9a3b
@@ -1074,11 +1031,6 @@ MonoBehaviour:
     m_LastClickedID: 3060
     m_ExpandedIDs: 00000000a80a00001e0b0000f40b0000a00d000000ca9a3b
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    m_SelectedIDs: 7c300000
-    m_LastClickedID: 12412
-    m_ExpandedIDs: 00000000a80a0000683000006e30000000ca9a3b
->>>>>>> parent of c9ca8bd... Animacion Minimalista
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1108,7 +1060,6 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     m_ExpandedIDs: 00000000ae0a0000000c0000ae0d000042310000
 =======
     m_ExpandedIDs: 00000000ae0a0000240b0000fe0b0000ac0d0000
@@ -1116,9 +1067,6 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000a80a00001e0b0000a00d0000
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    m_ExpandedIDs: 00000000a80a0000
->>>>>>> parent of c9ca8bd... Animacion Minimalista
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1203,7 +1151,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
     y: 688
     width: 1369
     height: 330
@@ -1213,11 +1160,6 @@ MonoBehaviour:
     y: 552.8
     width: 1183
     height: 250
-=======
-    y: 536.8
-    width: 787
-    height: 266
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 >>>>>>> parent of 5d2fd13... Mas cosas
@@ -1242,7 +1184,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
     y: 688
     width: 1369
     height: 330
@@ -1251,16 +1192,10 @@ MonoBehaviour:
     width: 1183
     height: 250
 >>>>>>> parent of 5d2fd13... Mas cosas
-=======
-    y: 536.8
-    width: 787
-    height: 266
->>>>>>> parent of c9ca8bd... Animacion Minimalista
   m_PersistentViewDataDictionary: {fileID: 0}
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
   m_LastSelectedObjectID: -251724
 --- !u!114 &22
@@ -1270,9 +1205,6 @@ MonoBehaviour:
 --- !u!114 &24
 >>>>>>> parent of a5bfb01... Primer Nivel
 =======
-=======
-  m_LastSelectedObjectID: 12428
->>>>>>> parent of c9ca8bd... Animacion Minimalista
 --- !u!114 &20
 >>>>>>> parent of 5d2fd13... Mas cosas
 MonoBehaviour:

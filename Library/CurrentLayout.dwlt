@@ -19,8 +19,8 @@ MonoBehaviour:
     height: 997
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 5}
-  m_MinSize: {x: 950, y: 300}
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 14}
+  - {fileID: 13}
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
@@ -70,37 +70,8 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 312}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-<<<<<<< HEAD
   controlID: 96
-=======
-  controlID: 980
->>>>>>> parent of a5bfb01... Primer Nivel
 --- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 477
-    y: 0
-    width: 620
-    height: 460
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
-  m_Panes:
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,9 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 8}
+  - {fileID: 5}
   - {fileID: 7}
+  - {fileID: 6}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -123,7 +94,7 @@ MonoBehaviour:
     height: 997
   m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &6
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &7
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,6 +135,30 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 583, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 38
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,28 +172,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 9}
-  - {fileID: 3}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
-<<<<<<< HEAD
-    width: 1920
+    y: 0
+    width: 1371
     height: 947
-  m_MinSize: {x: 583, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
-  vertical: 0
-  controlID: 38
---- !u!114 &8
-=======
-    width: 1536
-    height: 731
-  m_MinSize: {x: 683, y: 342}
-  m_MaxSize: {x: 16008, y: 8042}
-  vertical: 0
-  controlID: 979
+  m_MinSize: {x: 306, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 39
 --- !u!114 &9
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,47 +196,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 10}
-  - {fileID: 13}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-    width: 1371
-    height: 947
-  m_MinSize: {x: 306, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
-  vertical: 1
-  controlID: 39
---- !u!114 &9
-=======
-    width: 1097
-    height: 731
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
-  vertical: 1
-  controlID: 177
---- !u!114 &10
->>>>>>> parent of a5bfb01... Primer Nivel
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
   - {fileID: 11}
-  - {fileID: 12}
-  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1371
     height: 596
   m_MinSize: {x: 306, y: 221}
@@ -259,15 +208,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 40
 --- !u!114 &10
-=======
-    width: 1097
-    height: 460
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 12006, y: 4021}
-  vertical: 0
-  controlID: 178
---- !u!114 &11
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,13 +223,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 402
     height: 596
-=======
-    width: 322
-    height: 460
->>>>>>> parent of a5bfb01... Primer Nivel
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -297,7 +232,7 @@ MonoBehaviour:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +246,6 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 402
     y: 0
     width: 969
@@ -319,29 +253,13 @@ MonoBehaviour:
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
-=======
-    x: 322
-    y: 0
-    width: 155
-    height: 460
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 19}
->>>>>>> parent of a5bfb01... Primer Nivel
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
-=======
-  - {fileID: 19}
-  m_Selected: 2
-  m_LastSelected: 0
---- !u!114 &13
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,36 +274,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 596
     width: 1371
     height: 351
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 19}
-=======
-    y: 460
-    width: 1097
-    height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 23}
->>>>>>> parent of a5bfb01... Primer Nivel
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
-<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 2
 --- !u!114 &13
-=======
-  - {fileID: 22}
-  - {fileID: 23}
-  m_Selected: 2
-  m_LastSelected: 0
---- !u!114 &14
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -410,11 +311,7 @@ MonoBehaviour:
   - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 0
-<<<<<<< HEAD
 --- !u!114 &14
-=======
---- !u!114 &15
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,7 +366,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
     y: 92
     width: 400
     height: 575
@@ -479,33 +375,22 @@ MonoBehaviour:
     m_SelectedIDs: 8a28fcff
     m_LastClickedID: -251766
     m_ExpandedIDs: 7a28fcff8428fcff8628fcff9028fcffae28fcffb028fcffb228fcffb428fcff02f6ffff04f6ffff0ef6ffff10f6ffff12f6ffff14f6ffff24f6ffff26f6ffff2af6ffff2ef6ffffe4fbffff00000000
-=======
-    y: 92.8
-    width: 320
-    height: 439
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4fbffff
-    m_LastClickedID: -1052
-    m_ExpandedIDs: 08fbffff0cfbffff10fbffff16fbffff22fbffff24fbffff28fbffff2afbffff2cfbffff76fbffffdcfbffffdefbffffe0fbffffe4fbffff00000000
->>>>>>> parent of a5bfb01... Primer Nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Cabeza
-      m_OriginalName: Cabeza
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -1188
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
   m_ExpandedScenes:
   - CharactersTest
@@ -533,7 +418,6 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 404
     y: 92
     width: 965
@@ -541,28 +425,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 296.5953457207603
-=======
-    x: 324.80002
-    y: 92.8
-    width: 151
-    height: 439
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_SceneLighting: 1
-  lastFramingTime: 354.0874840768904
->>>>>>> parent of a5bfb01... Primer Nivel
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
     m_Target: {x: 6.337937, y: 0.7909156, z: 0.10546875}
     speed: 2
     m_Value: {x: 6.337937, y: 0.7909156, z: 0.10546875}
-=======
-    m_Target: {x: 1.1388804, y: -0.454697, z: -0.12302083}
-    speed: 2
-    m_Value: {x: 1.1388804, y: -0.454697, z: -0.12302083}
->>>>>>> parent of a5bfb01... Primer Nivel
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -594,15 +463,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
     m_Target: 11.368944
     speed: 2
     m_Value: 11.368944
-=======
-    m_Target: 5.455948
-    speed: 2
-    m_Value: 5.455948
->>>>>>> parent of a5bfb01... Primer Nivel
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -634,17 +497,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 404
     y: 92
     width: 965
     height: 575
-=======
-    x: 328.80002
-    y: 100
-    width: 150
-    height: 430
->>>>>>> parent of a5bfb01... Primer Nivel
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -666,23 +522,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 404
     y: 92
     width: 965
     height: 575
-=======
-    x: 324.80002
-    y: 92.8
-    width: 151
-    height: 439
->>>>>>> parent of a5bfb01... Primer Nivel
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107134092814252900, guid: 4a80f3dfac878e44587f3b69dab9471f, type: 2}
     m_ValueSerializationHelper:
-<<<<<<< HEAD
     - e00: 0.1
       e01: 0
       e02: 0
@@ -691,16 +539,6 @@ MonoBehaviour:
       e11: 0.1
       e12: 0
       e13: 253.7
-=======
-    - e00: 0.48514092
-      e01: 0
-      e02: 0
-      e03: -170.2696
-      e10: 0
-      e11: 0.48514092
-      e12: 0
-      e13: 146.6065
->>>>>>> parent of a5bfb01... Primer Nivel
       e20: 0
       e21: 0
       e22: 1
@@ -723,90 +561,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
-<<<<<<< HEAD
 --- !u!114 &19
-=======
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 479.2
-    y: 92.8
-    width: 616
-    height: 439
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_TargetDisplay: 0
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -760.8
-    m_HBaseRangeMax: 760.8
-    m_VBaseRangeMin: -432
-    m_VBaseRangeMax: 432
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 17
-      width: 616
-      height: 422
-    m_Scale: {x: 0.5543386, y: 0.5543386}
-    m_Translation: {x: 250.61404, y: 214.52573}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -452.0956
-      y: -386.99405
-      width: 1111.2343
-      height: 761.2676
-    m_MinimalGUI: 1
-  m_defaultScale: 0.404837
-  m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 770, y: 548.75}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000100
-  m_XRRenderMode: 0
---- !u!114 &21
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -843,7 +598,6 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -851,28 +605,13 @@ MonoBehaviour:
   - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\usuario\Documents\ProjectSound-master\ProjectSound-master
-=======
-    - Assets/Nathan/Nivel 1/Animaciones
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Characters/Nathan/Nivel 1/Animaciones
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\Andr\xE9s\\Documents\\GitHub\\ProjectSound"
->>>>>>> parent of a5bfb01... Primer Nivel
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
     m_SelectedIDs: ae0a0000
     m_LastClickedID: 2734
     m_ExpandedIDs: 00000000ae0a0000000c0000ae0d0000400e00004231000000ca9a3b
-=======
-    m_SelectedIDs: 900b0000
-    m_LastClickedID: 2960
-    m_ExpandedIDs: 00000000ae0a0000240b0000fe0b0000ac0d000000ca9a3b
->>>>>>> parent of a5bfb01... Primer Nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -900,11 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 00000000ae0a0000000c0000ae0d000042310000
-=======
-    m_ExpandedIDs: 00000000ae0a0000240b0000fe0b0000ac0d0000
->>>>>>> parent of a5bfb01... Primer Nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -929,14 +664,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 36cbfdff
-    m_LastClickedInstanceID: -144586
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-<<<<<<< HEAD
     m_ExpandedInstanceIDs: 66340000862e00009451000000000000880e0000e80b0000
-=======
-    m_ExpandedInstanceIDs: 66340000862e000094510000
->>>>>>> parent of a5bfb01... Primer Nivel
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -952,7 +683,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1016,13 +747,8 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-<<<<<<< HEAD
   m_LastSelectedObjectID: -251724
 --- !u!114 &22
-=======
-  m_LastSelectedObjectID: -1054
---- !u!114 &24
->>>>>>> parent of a5bfb01... Primer Nivel
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

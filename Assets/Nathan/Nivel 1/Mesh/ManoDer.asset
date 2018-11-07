@@ -45,14 +45,14 @@ Mesh:
     channels: []
     fullWeights: []
   m_BindPose:
-  - e00: -0.0063221753
-    e01: -0.99998
+  - e00: 0.03153357
+    e01: -0.99950284
     e02: 0
-    e03: 0.10085782
-    e10: 0.99998
-    e11: -0.0063221753
+    e03: 0.09011436
+    e10: 0.99950284
+    e11: 0.03153357
     e12: 0
-    e13: 0.008164082
+    e13: 0.0029089623
     e20: 0
     e21: 0
     e22: 1
@@ -215,33 +215,33 @@ MonoBehaviour:
     weight2: 0
     weight3: 0
     boneIndex0: 0
-    boneIndex1: -1
-    boneIndex2: -1
-    boneIndex3: -1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
   - weight0: 1
     weight1: 0
     weight2: 0
     weight3: 0
     boneIndex0: 0
-    boneIndex1: -1
-    boneIndex2: -1
-    boneIndex3: -1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
   - weight0: 1
     weight1: 0
     weight2: 0
     weight3: 0
     boneIndex0: 0
-    boneIndex1: -1
-    boneIndex2: -1
-    boneIndex3: -1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
   - weight0: 1
     weight1: 0
     weight2: 0
     weight3: 0
     boneIndex0: 0
-    boneIndex1: -1
-    boneIndex2: -1
-    boneIndex3: -1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
   m_Edges:
   - index1: 0
     index2: 1
@@ -255,14 +255,14 @@ MonoBehaviour:
   m_Indices: 000000000100000002000000020000000100000003000000
   m_BindPoses:
   - bindPose:
-      e00: -0.0063221753
-      e01: -0.99998
+      e00: 0.03153357
+      e01: -0.99950284
       e02: 0
-      e03: 0.10085782
-      e10: 0.99998
-      e11: -0.0063221753
+      e03: 0.09011436
+      e10: 0.99950284
+      e11: 0.03153357
       e12: 0
-      e13: 0.008164082
+      e13: 0.0029089623
       e20: 0
       e21: 0
       e22: 1

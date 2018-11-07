@@ -61,38 +61,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Anima2D\Examples\Scripts\CharacterMotion.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\Follow.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SpringBone.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SpringCollider.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SpringManager.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycle.cs" />
-    <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycleParallax.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\Bone2D.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\Control.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\EditorUpdaterProxy.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\Ik2D.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkCCD2D.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkGroup.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkLimb2D.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkSolver2D.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkSolver2DCCD.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\IkSolver2DLimb.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\MathUtils.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\Pose.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\PoseManager.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\SpriteMesh.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
-    <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
-    <Compile Include="Assets\Nathan\Nivel 1\PlayerController.cs" />
-    <None Include="Assets\Anima2D\Examples\Shaders\VisibleInsideMask.shader" />
-    <None Include="Assets\Anima2D\Examples\Shaders\VisibleOutsideMask.shader" />
-    <None Include="Assets\Anima2D\Version.txt" />
-    <None Include="Assets\Anima2D\Examples\Shaders\Unlit-Alpha-Cull-off.shader" />
-    <None Include="Assets\Anima2D\Licenses.txt" />
-    <None Include="Assets\Anima2D\Examples\Shaders\VertexLitOneDirectional.shader" />
-    <None Include="Assets\Anima2D\Readme.txt" />
+    <Compile Include="Assets\Characters\Nathan\Nivel 1\PlayerController.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\CharacterMotion.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\Follow.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SpringBone.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SpringCollider.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SpringManager.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SpriteCycle.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Examples\Scripts\SpriteCycleParallax.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\Bone2D.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\Control.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\EditorUpdaterProxy.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\Ik2D.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkCCD2D.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkGroup.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkLimb2D.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkSolver2D.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkSolver2DCCD.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\IkSolver2DLimb.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\MathUtils.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\Pose.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\PoseManager.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMesh.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMeshAnimation.cs" />
+    <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMeshInstance.cs" />
+    <Compile Include="Assets\MoveController.cs" />
+    <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\VisibleInsideMask.shader" />
+    <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\VisibleOutsideMask.shader" />
+    <None Include="Assets\Gizmos\Anima2D\Version.txt" />
+    <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\Unlit-Alpha-Cull-off.shader" />
+    <None Include="Assets\Gizmos\Anima2D\Licenses.txt" />
+    <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\VertexLitOneDirectional.shader" />
+    <None Include="Assets\Gizmos\Anima2D\Readme.txt" />
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Andrés/Documents/GitHub/ProjectSound/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Andrés/Documents/GitHub/ProjectSound/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -101,6 +105,9 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/Andrés/Documents/GitHub/ProjectSound/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Andrés/Documents/GitHub/ProjectSound/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Andrés/Documents/GitHub/ProjectSound/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

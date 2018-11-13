@@ -956,6 +956,75 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1066361928590422, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
     type: 2}
   m_PrefabInternal: {fileID: 2037648550}
+--- !u!114 &1138085918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138085917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d46675422420b64a94d6865e3861334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  groundMinDistance: 0.2
+  groundMaxDistance: 0.78
+  jumpAirControl: 1
+  jumpTimer: 0.3
+  jumpCounter: 0
+  jumpForward: 3
+  jumpHeight: 9.79
+  aClips: []
+  myAudioSource: {fileID: 0}
+  throwControl: 1
+  throwTimer: 0.3
+  throwCounter: 0
+  throwForward: 3
+  useRootMotion: 0
+  freeWalkSpeed: 2.5
+  freeRunningSpeed: 3
+  freeSprintSpeed: 4
+  strafeWalkSpeed: 2.5
+  strafeRunningSpeed: 3
+  strafeSprintSpeed: 4
+  stepOffsetEnd: 0.45
+  stepOffsetStart: 0.05
+  stepSmooth: 4
+  slopeLimit: 45
+  extraGravity: -10
+  isGrounded: 0
+  isSliding: 0
+  isJumping: 0
+  isLookingPhone: 0
+  animator: {fileID: 0}
+  _rigidbody2D: {fileID: 0}
+  maxFrictionPhysics: {fileID: 0}
+  frictionPhysics: {fileID: 0}
+  slippyPhysics: {fileID: 0}
+  _boxCollider2D: {fileID: 0}
+  colliderHeight: 0
+  input: {x: 0, y: 0}
+  speed: 0
+  verticalVelocity: 0
+  velocity: 0
+  maxSpeed: {x: 0, y: 0}
+--- !u!114 &1138085919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138085917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6199c42b06ebc704e8caf2dca8d4846a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: Horizontal
+  jumpInput: 32
+  lookPhoneInput: 9
 --- !u!4 &1138085921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4319427971691328, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
@@ -967,15 +1036,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138085917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b49cde13379f8924ba47c362ec745147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.05
   gravityModifier: 1
+  targetVelocity: {x: 0, y: 0}
+  grounded: 0
+  groundNormal: {x: 0, y: 0}
+  rb2d: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   maxSpeed: 5.03
   jumpTakeOffSpeed: 20
+  animator: {fileID: 0}
 --- !u!212 &1138085923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1391,19 +1479,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4102246862174196, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.9467519
+      value: 0.9467537
       objectReference: {fileID: 0}
     - target: {fileID: 4102246862174196, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.32196411
+      value: 0.3219588
       objectReference: {fileID: 0}
     - target: {fileID: 4274462993937878, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.9455649
+      value: 0.9455665
       objectReference: {fileID: 0}
     - target: {fileID: 4274462993937878, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.32543355
+      value: 0.32542905
       objectReference: {fileID: 0}
     - target: {fileID: 4589057179672500, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1582,7 +1670,7 @@ Prefab:
     - target: {fileID: 114493504087919414, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
       propertyPath: m_Solver.targetPosition.x
-      value: -140.13
+      value: -139.86
       objectReference: {fileID: 0}
     - target: {fileID: 114493504087919414, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
@@ -1607,7 +1695,7 @@ Prefab:
     - target: {fileID: 114187676207576720, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
       propertyPath: m_Solver.targetPosition.x
-      value: -139.83
+      value: -139.56
       objectReference: {fileID: 0}
     - target: {fileID: 114187676207576720, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
@@ -1627,7 +1715,7 @@ Prefab:
     - target: {fileID: 114102187767234096, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
       propertyPath: m_Solver.targetPosition.x
-      value: -139.85
+      value: -139.58
       objectReference: {fileID: 0}
     - target: {fileID: 114102187767234096, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
@@ -1657,7 +1745,7 @@ Prefab:
     - target: {fileID: 114347943616652248, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
       propertyPath: m_Solver.targetPosition.x
-      value: -139.64
+      value: -139.37
       objectReference: {fileID: 0}
     - target: {fileID: 114347943616652248, guid: 8f0f388904bd70d4fb703ddfb768d5d8,
         type: 2}
@@ -1692,6 +1780,18 @@ Prefab:
     - target: {fileID: 4319427971691328, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866350867391978, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224919746589796, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.8699951
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859380898837234, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.8699951
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0f388904bd70d4fb703ddfb768d5d8, type: 2}

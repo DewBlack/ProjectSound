@@ -1041,29 +1041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49cde13379f8924ba47c362ec745147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGroundNormalY: 0.05
-  gravityModifier: 1
-  targetVelocity: {x: 0, y: 0}
-  grounded: 0
-  groundNormal: {x: 0, y: 0}
-  rb2d: {fileID: 0}
-  velocity: {x: 0, y: 0}
-  contactFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  maxSpeed: 5.03
-  jumpTakeOffSpeed: 20
-  animator: {fileID: 0}
 --- !u!212 &1138085923
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -85,10 +85,12 @@
     <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMesh.cs" />
     <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMeshAnimation.cs" />
     <Compile Include="Assets\Gizmos\Anima2D\Scripts\SpriteMeshInstance.cs" />
-    <Compile Include="Assets\Scripts\vThirdPersonAnimator.cs" />
-    <Compile Include="Assets\Scripts\vThirdPersonController.cs" />
-    <Compile Include="Assets\Scripts\vThirdPersonInput.cs" />
-    <Compile Include="Assets\Scripts\vThirdPersonMotor.cs" />
+    <Compile Include="Assets\Scripts\Movimiento\vThirdPersonAnimator.cs" />
+    <Compile Include="Assets\Scripts\Movimiento\vThirdPersonController.cs" />
+    <Compile Include="Assets\Scripts\Movimiento\vThirdPersonInput.cs" />
+    <Compile Include="Assets\Scripts\Movimiento\vThirdPersonMotor.cs" />
+    <Compile Include="Assets\Scripts\Soong\ChangeSong.cs" />
+    <Compile Include="Assets\Scripts\Soong\SongInput.cs" />
     <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\VisibleInsideMask.shader" />
     <None Include="Assets\Gizmos\Anima2D\Examples\Shaders\VisibleOutsideMask.shader" />
     <None Include="Assets\Gizmos\Anima2D\Version.txt" />

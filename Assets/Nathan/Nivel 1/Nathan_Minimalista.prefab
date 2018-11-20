@@ -154,9 +154,12 @@ GameObject:
   - component: {fileID: 50482876711106826}
   - component: {fileID: 95854197936622920}
   - component: {fileID: 61523982863823906}
+  - component: {fileID: 61756421331933354}
+  - component: {fileID: 114879021215148736}
+  - component: {fileID: 114162692560640084}
   m_Layer: 0
   m_Name: Nathan_Minimalista
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +665,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534078362195860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.83999634, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4116778177065290}
@@ -706,7 +709,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747785377335158}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9486788, w: 0.31624126}
+  m_LocalRotation: {x: 0, y: 0, z: 0.94867826, w: 0.31624296}
   m_LocalPosition: {x: -0.27658743, y: -0.04408887, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -720,7 +723,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785994321038368}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9467532, w: 0.32196027}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9467537, w: 0.3219588}
   m_LocalPosition: {x: 1.4686134, y: -1.1237712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -880,7 +883,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184334468692610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -142.76, y: -12.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4817916419267222}
@@ -895,7 +898,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988657106808430}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9479328, w: 0.31847054}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9479324, w: 0.31847158}
   m_LocalPosition: {x: 1.4556246, y: -1.126355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -951,7 +954,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809057063293858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.84, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305757178769712}
@@ -1006,7 +1009,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457797558226764}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9455654, w: 0.3254322}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9455665, w: 0.32542905}
   m_LocalPosition: {x: 0.06352237, y: 0.27664614, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1047,7 +1050,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130316920709060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.83999634, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4795462382757368}
@@ -1178,6 +1181,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3263547, y: 5.5346594}
   m_EdgeRadius: 0
+--- !u!61 &61756421331933354
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184334468692610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.90735495, y: -0.13584232}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3263547, y: 5.5346594}
+  m_EdgeRadius: 0
 --- !u!95 &95854197936622920
 Animator:
   serializedVersion: 3
@@ -1212,7 +1240,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4148736462577048}
@@ -1248,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.46505967
+  m_Length: 0.46505958
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4630938754447788}
   m_AttachedIK: {fileID: 114302790735364028}
@@ -1264,7 +1292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.6700008
+  m_Length: 0.67000085
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4873106534921980}
   m_AttachedIK: {fileID: 114088536430492028}
@@ -1334,7 +1362,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4756849693717716}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.9455654, w: 0.3254322}
+      solverRotation: {x: 0, y: 0, z: 0.9455665, w: 0.32542905}
       defaultLocalRotation: {x: 0, y: 0, z: 0.9270111, w: 0.3750341}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4873106534921980}
@@ -1343,7 +1371,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -1.13, y: -2.99, z: 0}
+    targetPosition: {x: -143.04999, y: -15.179999, z: 0}
     flip: 1
 --- !u!114 &114115135087932740
 MonoBehaviour:
@@ -1357,7 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5831442
+  m_Length: 0.5831441
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4212372844201696}
   m_AttachedIK: {fileID: 114147071980590700}
@@ -1387,7 +1415,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4148736462577048}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.9486788, w: 0.31624126}
+      solverRotation: {x: 0, y: 0, z: 0.94867826, w: 0.31624296}
       defaultLocalRotation: {x: 0, y: 0, z: 0.9341917, w: 0.35677144}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4212372844201696}
@@ -1396,8 +1424,22 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.021004977, w: 0.9997794}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.64, y: -2.7, z: 0}
+    targetPosition: {x: -142.56, y: -14.889999, z: 0}
     flip: 1
+--- !u!114 &114162692560640084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184334468692610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6199c42b06ebc704e8caf2dca8d4846a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: Horizontal
+  jumpInput: 32
+  lookPhoneInput: 9
 --- !u!114 &114193825254527468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1430,7 +1472,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4212372844201696}
@@ -1446,7 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.0607529
+  m_Length: 2.060753
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4337563592764936}
   m_AttachedIK: {fileID: 0}
@@ -1466,7 +1508,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4295573468137160}
@@ -1496,7 +1538,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4210908688522658}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.9467532, w: 0.32196027}
+      solverRotation: {x: 0, y: 0, z: 0.9467537, w: 0.3219588}
       defaultLocalRotation: {x: 0, y: 0, z: 0.9303745, w: 0.3666105}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4517294815726338}
@@ -1505,7 +1547,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.016664512, w: 0.9998612}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.85, y: -0.81, z: 0}
+    targetPosition: {x: -142.76999, y: -13, z: 0}
     flip: 0
 --- !u!114 &114398278880192504
 MonoBehaviour:
@@ -1535,7 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.52446437
+  m_Length: 0.52446413
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4295573468137160}
   m_AttachedIK: {fileID: 114147071980590700}
@@ -1591,7 +1633,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4873106534921980}
@@ -1627,7 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.45568055
+  m_Length: 0.4556806
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4054575082545140}
   m_AttachedIK: {fileID: 114590103485742492}
@@ -1657,7 +1699,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4505345077771360}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.9479328, w: 0.31847054}
+      solverRotation: {x: 0, y: 0, z: 0.9479324, w: 0.31847158}
       defaultLocalRotation: {x: 0, y: 0, z: 0.93003374, w: 0.36747423}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4548613046030478}
@@ -1666,7 +1708,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.017631603, w: 0.9998446}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.83, y: -0.74, z: 0}
+    targetPosition: {x: -142.75, y: -12.929999, z: 0}
     flip: 0
 --- !u!114 &114603143911234692
 MonoBehaviour:
@@ -1696,7 +1738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.63419896
+  m_Length: 0.63420236
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4459672831380460}
   m_AttachedIK: {fileID: 0}
@@ -1732,7 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.57928026
+  m_Length: 0.5792806
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4548613046030478}
   m_AttachedIK: {fileID: 114590103485742492}
@@ -1748,7 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7500014
+  m_Length: 0.7500008
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4142665000976970}
   m_AttachedIK: {fileID: 114088536430492028}
@@ -1784,6 +1826,61 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114879021215148736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184334468692610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d46675422420b64a94d6865e3861334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  groundMinDistance: 0.2
+  groundMaxDistance: 0.5
+  jumpAirControl: 1
+  jumpTimer: 0.3
+  jumpCounter: 0
+  jumpForward: 3
+  jumpHeight: 4
+  aClips: []
+  myAudioSource: {fileID: 0}
+  throwControl: 1
+  throwTimer: 0.3
+  throwCounter: 0
+  throwForward: 3
+  useRootMotion: 0
+  freeWalkSpeed: 2.5
+  freeRunningSpeed: 3
+  freeSprintSpeed: 4
+  strafeWalkSpeed: 2.5
+  strafeRunningSpeed: 3
+  strafeSprintSpeed: 4
+  stepOffsetEnd: 0.45
+  stepOffsetStart: 0.05
+  stepSmooth: 4
+  slopeLimit: 45
+  extraGravity: -10
+  isGrounded: 0
+  isSliding: 0
+  isJumping: 0
+  isLookingPhone: 0
+  animator: {fileID: 0}
+  _rigidbody2D: {fileID: 0}
+  maxFrictionPhysics: {fileID: 0}
+  frictionPhysics: {fileID: 0}
+  slippyPhysics: {fileID: 0}
+  _boxCollider2D: {fileID: 0}
+  colliderHeight: 0
+  input: {x: 0, y: 0}
+  speed: 0
+  verticalVelocity: 0
+  velocity: 0
+  maxSpeed: {x: 0, y: 0}
 --- !u!114 &114880811391161618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1800,7 +1897,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4142665000976970}
@@ -1841,7 +1938,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4756849693717716}
@@ -1996,7 +2093,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2044,7 +2141,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2092,7 +2189,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2140,7 +2237,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2428,7 +2525,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2476,7 +2573,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0

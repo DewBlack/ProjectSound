@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Song
+  - Save
+  - Level
+  - songIcons
+  - Settings
   layers:
   - Default
   - TransparentFX

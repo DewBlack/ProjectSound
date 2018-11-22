@@ -16,23 +16,23 @@ public class PhoneController : MonoBehaviour {
 
     public Screens currently;
 
-    [HideInInspector]    
+    //[HideInInspector]    
     public GameObject[] screens;
-    [HideInInspector]
+    //[HideInInspector]
     public ChangeSong Songs;
-    [HideInInspector]
+    //[HideInInspector]
     public Button Windowed;
-    [HideInInspector]
+    //[HideInInspector]
     public Slider Brillo;
-    [HideInInspector]
+    //[HideInInspector]
     public Image Opacidad;
-    [HideInInspector]
+    //[HideInInspector]
     public Slider Volumen;
-    [HideInInspector]
+    //[HideInInspector]
     public Sprite[] buttons;
-    [HideInInspector]
+    //[HideInInspector]
     public TMP_Dropdown GraphicSettings;
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject player;
 
     public KeyCode pauseInput = KeyCode.Escape;

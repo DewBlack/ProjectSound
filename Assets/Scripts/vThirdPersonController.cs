@@ -38,4 +38,5 @@ namespace Invector.CharacterController
             animator.SetBool("LookPhone", isLookingPhone);
         }
     }
+    
 }

@@ -9,6 +9,7 @@ TagManager:
   - Level
   - songIcons
   - Settings
+  - Corredor
   layers:
   - Default
   - TransparentFX

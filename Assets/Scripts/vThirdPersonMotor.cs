@@ -32,8 +32,26 @@ namespace Invector.CharacterController
         [Tooltip("Add Extra jump speed, based on your speed input the character will move forward")]
         public float jumpForward = 3f;
         [Tooltip("Add Extra jump height, if you want to jump only with Root Motion leave the value with 0.")]
-        public float jumpHeight = 4f;   
-              
+        public float jumpHeight = 4f;
+
+
+        [Header("---! AudioSource Setup !---")]
+
+        [Tooltip("Aduio del Cling que quiere Afor")]
+        public AudioSource Cling;
+        [Tooltip("Aduio de sacar movil que quiere Afor")]
+        public AudioSource phoneLook;
+        [Tooltip("Aduio de la muerte en el sentits que quiere Afor")]
+        public AudioSource deathSentits;
+        [Tooltip("Aduio de cuando muere que quiere Afor")]
+        public AudioSource death;
+        [Tooltip("Aduio de muchedumbre hablando que quiere Afor")]
+        public AudioSource talk;
+        [Tooltip("Aduio de pasar de nivel que quiere Afor")]
+        public AudioSource nextLevel; 
+
+
+
 
         #region Actions
 
@@ -141,7 +159,7 @@ namespace Invector.CharacterController
                         transform.localScale = new Vector3(-1, 1, 1);
                     else
                         transform.localScale = new Vector3(1, 1, 1);
-                        _rigidbody2D.velocity = new Vector2(speed * 5f, _rigidbody2D.velocity.y);
+                        _rigidbody2D.velocity = new Vector2(speed * 7f, _rigidbody2D.velocity.y);
                 }
             }
 
@@ -201,7 +219,12 @@ namespace Invector.CharacterController
 
         #region Ground Check    
 
-        private void OnCollisionEnter2D(Collision2D collision)
+       
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            isGrounded = false;
+        }
+        private void OnCollisionStay2D(Collision2D collision)
         {
             if (_rigidbody2D.velocity.y == 0)
             {
@@ -209,10 +232,11 @@ namespace Invector.CharacterController
                 animator.SetBool("Falling", false);
             }
         }
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            isGrounded = false;
-        }
         #endregion
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "songIcons")
+                Cling.Play();
+        }
     }
 }

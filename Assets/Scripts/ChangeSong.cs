@@ -61,6 +61,7 @@ public class ChangeSong : MonoBehaviour {
 
     public virtual void UptadeSong(int song)
     {
+        audios[SongPlaying].Stop();
         SongPlaying = song;
         audios[song].Play();
     }

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Death : MonoBehaviour {
 
+    public AudioSource Deathsound;
+    public bool play;
+
 	// Use this for initialization
 	void Start () {
-		
+        Deathsound = GetComponent<AudioSource>();
+        play = false;
 	}
 	
 	// Update is called once per frame
@@ -14,14 +18,24 @@ public class Death : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Cargando");
-            SaveLoad.LoadGameData();
-            Debug.Log("Cargado");
+            if (!play)
+            {
+                Deathsound.Play();
+                play = true;
+            }
+            else if(!Deathsound.isPlaying)
+            {
 
+                Debug.Log("Cargando");
+                SaveLoad.LoadGameData();
+                Debug.Log("Cargado");
+
+            }
+        
         }
     }
 }

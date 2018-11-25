@@ -5,6 +5,7 @@ using UnityEngine;
 public class SongIcon : MonoBehaviour {
 
     public GameObject Level;
+    public GameObject imagenNotificacion;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class SongIcon : MonoBehaviour {
         {
             Level.GetComponent<ChangeSong>().maxSongs++;
             gameObject.SetActive(false);
+            imagenNotificacion.SetActive(true);
         }
 
     }

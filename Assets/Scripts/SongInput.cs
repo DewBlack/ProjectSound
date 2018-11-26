@@ -13,6 +13,8 @@ namespace Invector.CharacterController
         public KeyCode nextSongInput = KeyCode.E;
         public KeyCode previusSongInput = KeyCode.Q;
         public KeyCode pauseSongInput = KeyCode.R;
+        public KeyCode TurnUpVolume = KeyCode.C;
+        public KeyCode TurnDownVoulume = KeyCode.V;
         
         protected ChangeSong cs;                // access the ThirdPersonController component                
 
@@ -41,6 +43,8 @@ namespace Invector.CharacterController
             PauseSongInput();
             NextSongInput();
             PreviusSongInput();
+            TurnUpVolumeInput();
+            TurnDownVolumeInput();
         }
 
         #region Basic Options Inputs      
@@ -62,6 +66,18 @@ namespace Invector.CharacterController
             if (Input.GetKeyDown(previusSongInput))
                 cs.PreviusSong();
         }  
+
+        protected virtual void TurnUpVolumeInput()
+        {
+            if (Input.GetKeyDown(TurnUpVolume))
+                cs.TurnUpVolume();
+        }
+
+        protected virtual void TurnDownVolumeInput()
+        {
+            if (Input.GetKeyDown(TurnDownVoulume))
+                cs.TurnDownVolume();
+        }
 
         #endregion
     }

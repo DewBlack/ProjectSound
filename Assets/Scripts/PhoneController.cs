@@ -48,15 +48,19 @@ public class PhoneController : MonoBehaviour {
         Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); });
         GraphicSettings.onValueChanged.AddListener(delegate { QualitySettingsUpdate(); });
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         if (Input.GetKeyDown(pauseInput))
+        {
             if (gameObject.GetComponent<Canvas>().enabled)
                 DisablePhone();
             else
                 ActivePhone();
-	}
+            Debug.Log("Entra");
+        }
+    }
 
     private void ActivePhone()
     {
@@ -133,7 +137,15 @@ public class PhoneController : MonoBehaviour {
             Volumen.value = 25f;
         
         AudioListener.volume = Volumen.value/100;
-        Debug.Log(AudioListener.volume);
+        Songs.UpdateVolumen(Volumen.value);
+    }
+    public void ChangeVolume(float vol)
+    {
+        if (AudioListener.volume >= 0.25f)
+            AudioListener.volume += vol;
+
+        Volumen.value = AudioListener.volume;
+        Songs.UpdateVolumen(Volumen.value);
     }
 
     private void QualitySettingsUpdate()

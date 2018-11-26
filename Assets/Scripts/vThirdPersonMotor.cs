@@ -106,6 +106,8 @@ namespace Invector.CharacterController
         public float velocity;                              // velocity to apply to rigidbody    
         [HideInInspector]
         public Vector2 maxSpeed;
+        [HideInInspector]
+        public Vector2 scale;
 
         #endregion
 
@@ -115,6 +117,7 @@ namespace Invector.CharacterController
         {
             // this method is called on the Start of the ThirdPersonController
 
+            scale = transform.localScale;
             // access components
             animator = GetComponent<Animator>();
 
@@ -129,6 +132,8 @@ namespace Invector.CharacterController
         {
             ControlJumpBehaviour();
             ControlLocomotion();
+            if (_rigidbody2D.velocity.y != 0)
+                isGrounded = false;
         }
 
         #region Locomotion 
@@ -156,10 +161,16 @@ namespace Invector.CharacterController
                 if (isGrounded || (!isGrounded && jumpAirControl)) //Se puede mover y tiene un Imput de moverse
                 {
                     if (speed < 0)
-                        transform.localScale = new Vector3(-1, 1, 1);
+                    {
+                        scale.x = scale.x < 0 ? -scale.x : scale.x;
+                        transform.localScale = scale;
+                    }
                     else
-                        transform.localScale = new Vector3(1, 1, 1);
-                        _rigidbody2D.velocity = new Vector2(speed * 7f, _rigidbody2D.velocity.y);
+                    {
+                        scale.x = scale.x < 0 ? scale.x : -scale.x;
+                        transform.localScale = scale;
+                    }
+                    _rigidbody2D.velocity = new Vector2(speed * 7f, _rigidbody2D.velocity.y);
                 }
             }
 
@@ -231,6 +242,7 @@ namespace Invector.CharacterController
                 isGrounded = true;
                 animator.SetBool("Falling", false);
             }
+           
         }
         #endregion
         private void OnTriggerEnter2D(Collider2D collision)

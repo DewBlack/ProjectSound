@@ -6,9 +6,11 @@ public class ChangeSong : MonoBehaviour {
     
     public AudioSource[] audios;
     public GameObject[] levels;
+    public GameObject[] moviles;
     public int SongPlaying;
     public int maxSongs;
-    
+    public float modificador;
+
     public virtual void Init()
     {
         audios[SongPlaying].Play(0);
@@ -64,6 +66,26 @@ public class ChangeSong : MonoBehaviour {
         audios[SongPlaying].Stop();
         SongPlaying = song;
         audios[song].Play();
+    }
+
+    public virtual void TurnUpVolume()
+    {
+        GameObject.FindWithTag("Phone").GetComponent<PhoneController>().ChangeVolume(modificador);
+    }
+
+    public virtual void TurnDownVolume()
+    {
+        GameObject.FindWithTag("Phone").GetComponent<PhoneController>().ChangeVolume(-modificador);
+    }
+
+    public virtual void UpdateVolumen(double volumen)
+    {
+        for(int i = 0; i < moviles.Length; i++)
+        {
+            var diferencia = moviles[i].GetComponent<Moving>().diference();
+            diferencia = diferencia * (float)(volumen);
+            moviles[i].transform.localPosition = moviles[i].GetComponent<Moving>().Start + diferencia;
+        }
     }
 
 

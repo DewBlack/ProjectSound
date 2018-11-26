@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Invector.CharacterController;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -48,15 +49,19 @@ public class PhoneController : MonoBehaviour {
         Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); });
         GraphicSettings.onValueChanged.AddListener(delegate { QualitySettingsUpdate(); });
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         if (Input.GetKeyDown(pauseInput))
+        {
             if (gameObject.GetComponent<Canvas>().enabled)
                 DisablePhone();
             else
                 ActivePhone();
-	}
+            Debug.Log("Entra");
+        }
+    }
 
     private void ActivePhone()
     {
@@ -64,7 +69,7 @@ public class PhoneController : MonoBehaviour {
         Cursor.lockState = CursorLockMode.None;
 
         gameObject.GetComponent<Canvas>().enabled = true;
-        player.SetActive(false);
+        player.GetComponent<vThirdPersonInput>().enabled = false;
 
         foreach (var s in screens)
             s.SetActive(false);
@@ -75,7 +80,7 @@ public class PhoneController : MonoBehaviour {
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        player.SetActive(true);
+        player.GetComponent<vThirdPersonInput>().enabled = true;
         gameObject.GetComponent<Canvas>().enabled = false;
         foreach (var s in screens)
             s.SetActive(false);
@@ -130,10 +135,18 @@ public class PhoneController : MonoBehaviour {
     private void SlideVolumen()
     {
         if (Volumen.value < 25)        
-            Volumen.value = 25f;
+            Volumen.value = 25;
         
-        AudioListener.volume = Volumen.value/100;
-        Debug.Log(AudioListener.volume);
+        AudioListener.volume = Volumen.value - 100;
+        Songs.UpdateVolumen((Volumen.value - 25) / 75);
+    }
+    public void ChangeVolume(float vol)
+    {
+        AudioListener.volume += vol;
+        if (AudioListener.volume <= 0.25f)
+            AudioListener.volume = 0.25f;
+        Volumen.value = AudioListener.volume;
+        Songs.UpdateVolumen((Volumen.value - 25) / 75);
     }
 
     private void QualitySettingsUpdate()

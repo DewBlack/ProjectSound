@@ -6,6 +6,7 @@ using UnityEngine;
 public class SaveLoad : MonoBehaviour {
 
     public bool initLoad;
+    public bool deleteSaved;
     public static GameObject character;
     public static ChangeSong Songs;
     public static GameObject SongIcon1;
@@ -39,6 +40,9 @@ public class SaveLoad : MonoBehaviour {
         }
         if(initLoad)
             LoadGameData();
+        if (deleteSaved)
+            deleteSavedData();
+
     }
 	
 	// Update is called once per frame
@@ -46,6 +50,10 @@ public class SaveLoad : MonoBehaviour {
 		
 	}
 
+    public static void deleteSavedData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     public static void LoadGameData()
     {
 

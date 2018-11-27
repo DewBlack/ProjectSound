@@ -71,13 +71,13 @@ namespace Invector.CharacterController
 
         protected virtual void TurnUpVolumeInput()
         {
-            if (Input.GetKeyDown(TurnUpVolume))
+            if (Input.GetKey(TurnUpVolume))
                 cs.TurnUpVolume();
         }
 
         protected virtual void TurnDownVolumeInput()
         {
-            if (Input.GetKeyDown(TurnDownVoulume))
+            if (Input.GetKey(TurnDownVoulume))
                 cs.TurnDownVolume();
         }
 

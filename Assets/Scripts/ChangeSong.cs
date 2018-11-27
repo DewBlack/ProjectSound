@@ -14,6 +14,14 @@ public class ChangeSong : MonoBehaviour {
     public virtual void Init()
     {
         audios[SongPlaying].Play();
+    
+    }
+
+    public void Update()
+    {
+        Debug.Log("Esta seleccionada la cancion " + SongPlaying);
+        Debug.Log("Es " + audios[SongPlaying].isPlaying + " que este en play");
+        Debug.Log("Con un volumen de " + AudioListener.volume);
     }
 
     public virtual void NextSong()
@@ -43,11 +51,11 @@ public class ChangeSong : MonoBehaviour {
         }
     }
     public virtual void PauseSong()
-    {/*
+    {
         if(audios[SongPlaying].isPlaying)
             audios[SongPlaying].Pause(); 
          else
-            audios[SongPlaying].Play();*/
+            audios[SongPlaying].Play();
     }
     public virtual void PlaySong()
     {
@@ -70,11 +78,13 @@ public class ChangeSong : MonoBehaviour {
 
     public virtual void TurnUpVolume()
     {
+        Debug.Log(modificador);
         GameObject.FindWithTag("Phone").GetComponent<PhoneController>().ChangeVolume(modificador);
     }
 
     public virtual void TurnDownVolume()
     {
+        Debug.Log(-modificador);
         GameObject.FindWithTag("Phone").GetComponent<PhoneController>().ChangeVolume(-modificador);
     }
 

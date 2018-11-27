@@ -137,7 +137,7 @@ public class PhoneController : MonoBehaviour {
         if (Volumen.value < 25)        
             Volumen.value = 25;
         
-        AudioListener.volume = 100 - Volumen.value;
+        AudioListener.volume = Volumen.value/100;
         Songs.UpdateVolumen((Volumen.value - 25) / 75);
     }
     public void ChangeVolume(float vol)
@@ -146,7 +146,7 @@ public class PhoneController : MonoBehaviour {
         if (Volumen.value < 25)        
             Volumen.value = 25;
         
-        AudioListener.volume = 100 - Volumen.value;
+        AudioListener.volume = Volumen.value/100;
         Songs.UpdateVolumen((Volumen.value - 25) / 75);
     }
 

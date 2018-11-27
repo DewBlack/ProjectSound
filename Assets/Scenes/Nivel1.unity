@@ -7257,7 +7257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f48660a5f0eb8478888d787919b9d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initLoad: 1
+  initLoad: 0
   deleteSaved: 1
 --- !u!4 &590016586
 Transform:

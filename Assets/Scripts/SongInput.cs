@@ -25,6 +25,8 @@ namespace Invector.CharacterController
             cs = GetComponent<ChangeSong>();
             if (cs != null)
                 cs.Init();
+            else
+                Debug.LogError("No se encuentra change Song");
         }
         
         protected virtual void LateUpdate()

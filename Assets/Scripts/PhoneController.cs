@@ -45,8 +45,8 @@ public class PhoneController : MonoBehaviour {
     {
         DisablePhone();
         SlideVolumen();
-        Brillo.onValueChanged.AddListener(delegate { SlideShine(); });
-        Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); });
+        Brillo.onValueChanged.AddListener(delegate { SlideShine(); }); //Sergi
+        Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); }); //Sergi
         GraphicSettings.onValueChanged.AddListener(delegate { QualitySettingsUpdate(); });
     }
 
@@ -132,7 +132,7 @@ public class PhoneController : MonoBehaviour {
         Opacidad.color = tempColor;
     }
     
-    private void SlideVolumen()
+    private void SlideVolumen() //Sergi
     {
         if (Volumen.value < 25)        
             Volumen.value = 25;
@@ -149,7 +149,7 @@ public class PhoneController : MonoBehaviour {
         Songs.UpdateVolumen((Volumen.value - 25) / 75);
     }
 
-    private void QualitySettingsUpdate()
+    private void QualitySettingsUpdate() //Sergi
     {
         QualitySettings.SetQualityLevel(GraphicSettings.value - 1, true);
         Debug.Log("La configuracion ha cambiado ha: " + QualitySettings.names[GraphicSettings.value - 1]);

@@ -13,7 +13,7 @@ public class ChangeSong : MonoBehaviour {
 
     public virtual void Init()
     {
-        audios[SongPlaying].Play(0);
+        audios[SongPlaying].Play();
     }
 
     public virtual void NextSong()
@@ -43,16 +43,16 @@ public class ChangeSong : MonoBehaviour {
         }
     }
     public virtual void PauseSong()
-    {
+    {/*
         if(audios[SongPlaying].isPlaying)
             audios[SongPlaying].Pause(); 
          else
-            audios[SongPlaying].Play();
+            audios[SongPlaying].Play();*/
     }
     public virtual void PlaySong()
     {
         Debug.Log(SongPlaying);
-        audios[SongPlaying].Play(0);
+        audios[SongPlaying].Play();
     }
     public virtual void UpdateLevel()
     {

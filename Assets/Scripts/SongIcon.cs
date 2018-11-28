@@ -23,7 +23,8 @@ public class SongIcon : MonoBehaviour {
         {
             Level.GetComponent<ChangeSong>().maxSongs++;
             gameObject.SetActive(false);
-            imagenMecanica.SetActive(true);
+            if(imagenMecanica!=null)
+                imagenMecanica.SetActive(true);
         }
 
     }

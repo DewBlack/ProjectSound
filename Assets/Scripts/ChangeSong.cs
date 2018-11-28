@@ -26,6 +26,7 @@ public class ChangeSong : MonoBehaviour {
 
     public virtual void NextSong()
     {
+        Debug.Log("NextSongInput");
         int aux = (SongPlaying + 1 >= audios.Length) ? 0 : SongPlaying + 1;
         if (aux < maxSongs)
         {
@@ -39,6 +40,7 @@ public class ChangeSong : MonoBehaviour {
     }
     public virtual void PreviusSong()
     {
+        Debug.Log("PreviousSongInput");
         int aux = (SongPlaying - 1 < 0) ? audios.Length -1 : SongPlaying - 1;
         if (aux < maxSongs)
         {

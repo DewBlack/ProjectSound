@@ -16,7 +16,7 @@ public class PantallaDeCarga : MonoBehaviour {
 
     public Image rotacionCascos;
     [Range(5, 20)]
-    public float rotacion = 15;
+    public float rotacion = float.Epsilon;
 
 
     // Use this for initialization
@@ -53,6 +53,7 @@ public class PantallaDeCarga : MonoBehaviour {
         Color c = imagenDeCarga.color;
         Color c2 = rotacionCascos.color;
         c.a = 0.0f;
+        c2.a = 0.0f;
         while(c.a < 1)
         {
             imagenDeCarga.color = c;
@@ -61,14 +62,14 @@ public class PantallaDeCarga : MonoBehaviour {
             c2.a += velocidadAparecer;
             yield return null;
         }
-
-
+        
         SceneManager.LoadScene(nombreEscena);
 
         while(!nombreEscena.Equals(SceneManager.GetActiveScene().name))
         {
             yield return null;
         }
+
         while (c.a > 0)
         {
             imagenDeCarga.color = c;
@@ -77,6 +78,7 @@ public class PantallaDeCarga : MonoBehaviour {
             c2.a -= velocidadOcultar;
             yield return null;
         }
+
         imagenDeCarga.gameObject.SetActive(false);
         rotacionCascos.gameObject.SetActive(false);
         StopCoroutine("GirarCascos");
@@ -86,6 +88,7 @@ public class PantallaDeCarga : MonoBehaviour {
     {
         while (true)
         {
+            rotacion = 5;
             rotacionCascos.transform.rotation = Quaternion.Euler(0, rotacionCascos.transform.rotation.eulerAngles.y + rotacion, 0);
             yield return null;
         }

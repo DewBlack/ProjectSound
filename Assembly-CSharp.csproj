@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\CorredorPuto.cs" />
     <Compile Include="Assets\Scripts\Death.cs" />
     <Compile Include="Assets\Scripts\Moving.cs" />
+    <Compile Include="Assets\Scripts\newSong.cs" />
     <Compile Include="Assets\Scripts\PantallaDeCarga.cs" />
     <Compile Include="Assets\Scripts\PhoneController.cs" />
     <Compile Include="Assets\Scripts\SaveLoad.cs" />

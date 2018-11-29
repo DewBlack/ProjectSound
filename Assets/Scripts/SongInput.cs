@@ -60,14 +60,12 @@ namespace Invector.CharacterController
 
         protected virtual void NextSongInput()
         {
-            Debug.Log("NextSongInput");
             if (Input.GetKeyDown(nextSongInput))
                 cs.NextSong();
         }       
 
         protected virtual void PreviusSongInput()
         {
-            Debug.Log("PreviousSongInput");
             if (Input.GetKeyDown(previusSongInput))
                 cs.PreviusSong();
         }  

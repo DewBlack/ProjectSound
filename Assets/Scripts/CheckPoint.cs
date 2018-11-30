@@ -21,9 +21,7 @@ public class CheckPoint : MonoBehaviour {
         if (collision.tag == "Player" && !saved)
         {
             saved = true;
-            Debug.Log("Guardando");
             SaveLoad.SaveGameData();
-            Debug.Log("Guardado Existoso");
         }
     }
 }

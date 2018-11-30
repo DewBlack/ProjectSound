@@ -91,6 +91,8 @@
     <Compile Include="Assets\Scripts\ChineamticDeath.cs" />
     <Compile Include="Assets\Scripts\CorredorPuto.cs" />
     <Compile Include="Assets\Scripts\Death.cs" />
+    <Compile Include="Assets\Scripts\guitarristaSong.cs" />
+    <Compile Include="Assets\Scripts\ManagerLevel2.cs" />
     <Compile Include="Assets\Scripts\Moving.cs" />
     <Compile Include="Assets\Scripts\newSong.cs" />
     <Compile Include="Assets\Scripts\PantallaDeCarga.cs" />

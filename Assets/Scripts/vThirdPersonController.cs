@@ -19,8 +19,6 @@ namespace Invector.CharacterController
             // conditions to do this action
             bool jumpConditions = isGrounded && !isJumping && !isLookingPhone; 
             // return if jumpCondigions is false
-            print ("la condicion para saltar es"+jumpConditions);
-            print("ya esta saltando?"+ isJumping);
             if (!jumpConditions) return;
             // trigger jump behaviour
             jumpCounter = jumpTimer;

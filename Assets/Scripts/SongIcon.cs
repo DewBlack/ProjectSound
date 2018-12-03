@@ -5,7 +5,6 @@ using UnityEngine;
 public class SongIcon : MonoBehaviour {
 
     public GameObject Level;
-    public GameObject imagenMecanica;
 
 	// Use this for initialization
 	void Start () {
@@ -23,8 +22,6 @@ public class SongIcon : MonoBehaviour {
         {
             Level.GetComponent<ChangeSong>().maxSongs++;
             gameObject.SetActive(false);
-            if(imagenMecanica!=null)
-                imagenMecanica.SetActive(true);
         }
 
     }

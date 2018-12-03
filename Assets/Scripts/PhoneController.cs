@@ -44,6 +44,8 @@ public class PhoneController : MonoBehaviour {
     public Sprite notification;
     //[HideInInspector]
     public Image phoneIMG;
+    [Range(25, 100)]
+    public float volumen;
 
     public KeyCode pauseInput = KeyCode.Escape;
 
@@ -52,6 +54,8 @@ public class PhoneController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        volumen = 100;
+        AudioListener.volume = 1;
         DisablePhone();
         SlideVolumen();
         Brillo.onValueChanged.AddListener(delegate { SlideShine(); }); //Sergi
@@ -159,15 +163,17 @@ public class PhoneController : MonoBehaviour {
     }
     public void ChangeVolume(float vol)
     {
-        Volumen.value += vol;
-        if (Volumen.value < 25)
-            Volumen.value = 25;
+        volumen += vol;
+        if (volumen >= 100)
+            volumen = 100;
+        if (volumen <= 25)
+            volumen = 25;
         foreach(AudioSource audio in Songs.audios)
-            audio.volume = Volumen.value / 100;
-        Songs.UpdateVolumen((Volumen.value - 25) / 75);
+            audio.volume = volumen / 100;
+        Songs.UpdateVolumen((volumen - 25) / 75);
     }
 
-    private void QualitySettingsUpdate() //Sergi
+    private void QualitySettingsUpdate()
     {
         QualitySettings.SetQualityLevel(GraphicSettings.value - 1, true);
         Debug.Log("La configuracion ha cambiado ha: " + QualitySettings.names[GraphicSettings.value - 1]);
@@ -181,7 +187,7 @@ public class PhoneController : MonoBehaviour {
 
     public void MainMenuButton()
     {
-        //SceneManager.LoadScene("Main Menu", LoadSceneMode.);
+        PantallaDeCarga.Instancia.CargarEscena(Escenas.Menu.ToString());
     }
 
     public void SMSButton()
@@ -191,8 +197,12 @@ public class PhoneController : MonoBehaviour {
         screens[(int)currently].SetActive(true);
 
         phoneIMG.sprite = notification;
+        CancelInvoke("DifuminePhoneIcon");
+        CancelInvoke("FuminePhoneIcon");
 
-        
+        Color c = phoneIMG.color;
+        c.a = 1;
+        phoneIMG.color = c;
 
         for (int i = 0; i < SMS.Length; i++)
         {
@@ -201,11 +211,9 @@ public class PhoneController : MonoBehaviour {
                 SMS[i].SetActive(true);
         }
     }
-
     public void MessageArrived()
     {
-        smsRecived++;
-
+        InvokeRepeating("DifuminePhoneIcon", 0, 0.1f);
     }
 
     public void WindowedButton()
@@ -242,4 +250,33 @@ public class PhoneController : MonoBehaviour {
                 return Screens.Main;
         }
     }
+
+
+    private void DifuminePhoneIcon()
+    {
+        Color c = phoneIMG.color;
+        c.a -= 0.1f;
+        phoneIMG.color = c;
+        Debug.Log("Difumine");
+
+        if (c.a < 0)
+        {
+            CancelInvoke("DifuminePhoneIcon");
+            InvokeRepeating("FuminePhoneIcon", 0, 0.1f);            
+        }
+    }
+    private void FuminePhoneIcon()
+    {
+        Color c = phoneIMG.color;
+        c.a += 0.1f;
+        phoneIMG.color = c;
+        Debug.Log("Fumine");
+
+        if (c.a > 1)
+        {
+            CancelInvoke("FuminePhoneIcon");
+            InvokeRepeating("DifuminePhoneIcon", 0, 0.1f);
+        }
+    }
+
 }

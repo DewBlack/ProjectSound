@@ -10,7 +10,12 @@ public class SMSArrived : MonoBehaviour {
     public Sprite notification;
 
     public Image phoneIMG;
+    public PhoneController phone;
 
+    private void Start()
+    {
+        GameObject.Find("Movil");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PhoneController phone = GameObject.FindGameObjectWithTag("Phone").GetComponent<PhoneController>();
@@ -21,11 +26,10 @@ public class SMSArrived : MonoBehaviour {
             {
                 phone.smsRecived++;
                 phoneIMG.sprite = notification;
+                phone.MessageArrived();
             }
             else
                 Debug.LogError("ERROR: Try to send a sms when already sent ir");
-
-            Destroy(gameObject);
         }
     }
 }

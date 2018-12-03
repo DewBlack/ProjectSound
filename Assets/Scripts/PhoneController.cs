@@ -11,7 +11,8 @@ public enum Screens
     Main,
     Options,
     Options_Unhide,
-    Controller
+    Controller,
+    SMS
 }
 public class PhoneController : MonoBehaviour {
 
@@ -32,9 +33,17 @@ public class PhoneController : MonoBehaviour {
     //[HideInInspector]
     public Sprite[] buttons;
     //[HideInInspector]
+    public GameObject[] SMS;
+    //[HideInInspector]
+    public int smsRecived;
+    //[HideInInspector]
     public TMP_Dropdown GraphicSettings;
     //[HideInInspector]
     public GameObject player;
+    //[HideInInspector]
+    public Sprite notification;
+    //[HideInInspector]
+    public Image phoneIMG;
 
     public KeyCode pauseInput = KeyCode.Escape;
 
@@ -70,13 +79,15 @@ public class PhoneController : MonoBehaviour {
 
         gameObject.GetComponent<Canvas>().enabled = true;
         player.GetComponent<vThirdPersonInput>().enabled = false;
+        player.GetComponent<vThirdPersonController>().input = Vector2.zero;
+        player.GetComponent<vThirdPersonController>()._rigidbody2D.velocity = Vector2.zero;
 
         foreach (var s in screens)
             s.SetActive(false);
         screens[(int)currently].SetActive(true);
     }
 
-   public void DisablePhone()
+    public void DisablePhone()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -91,15 +102,25 @@ public class PhoneController : MonoBehaviour {
     {
         if (currently != Screens.Main)
         {
-            screens[(int)currently].SetActive(false);
-            currently = ToScreen((int)currently - 1);
-            screens[(int)currently].SetActive(true);
+            if (currently == Screens.SMS)
+            {
+                screens[(int)currently].SetActive(false);
+                currently = Screens.Main;
+                screens[(int)currently].SetActive(true);
+            }
+            else
+            {
+                screens[(int)currently].SetActive(false);
+                currently = ToScreen((int)currently - 1);
+                screens[(int)currently].SetActive(true);
+            }
+
+
         }
         else
         {
             currently = Screens.Main;
             DisablePhone();
-
         }
     }
 
@@ -124,29 +145,25 @@ public class PhoneController : MonoBehaviour {
         currently = ToScreen((int)currently + 1);
         screens[(int)currently].SetActive(true);
     }
-    
+
     private void SlideShine()
     {
         var tempColor = Opacidad.color;
         tempColor.a = (100 - Brillo.value) / 100;
         Opacidad.color = tempColor;
     }
-    
-    private void SlideVolumen() //Sergi
+
+    private void SlideVolumen() 
     {
-        if (Volumen.value < 25)        
-            Volumen.value = 25;
-        
-        AudioListener.volume = Volumen.value/100;
-        Songs.UpdateVolumen((Volumen.value - 25) / 75);
+        AudioListener.volume = Volumen.value / 100;
     }
     public void ChangeVolume(float vol)
     {
         Volumen.value += vol;
-        if (Volumen.value < 25)        
+        if (Volumen.value < 25)
             Volumen.value = 25;
-        
-        AudioListener.volume = Volumen.value/100;
+        foreach(AudioSource audio in Songs.audios)
+            audio.volume = Volumen.value / 100;
         Songs.UpdateVolumen((Volumen.value - 25) / 75);
     }
 
@@ -165,6 +182,30 @@ public class PhoneController : MonoBehaviour {
     public void MainMenuButton()
     {
         //SceneManager.LoadScene("Main Menu", LoadSceneMode.);
+    }
+
+    public void SMSButton()
+    {
+        screens[(int)currently].SetActive(false);
+        currently = Screens.SMS;
+        screens[(int)currently].SetActive(true);
+
+        phoneIMG.sprite = notification;
+
+        
+
+        for (int i = 0; i < SMS.Length; i++)
+        {
+            Debug.Log(smsRecived + " " + i);
+            if (smsRecived > i)
+                SMS[i].SetActive(true);
+        }
+    }
+
+    public void MessageArrived()
+    {
+        smsRecived++;
+
     }
 
     public void WindowedButton()

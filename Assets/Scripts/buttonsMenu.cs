@@ -13,6 +13,8 @@ public class buttonsMenu : MonoBehaviour {
 
     public void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); });
         GraphicSettings.onValueChanged.AddListener(delegate { QualitySettingsUpdate(); });
     }
@@ -39,6 +41,10 @@ public class buttonsMenu : MonoBehaviour {
     {
         QualitySettings.SetQualityLevel(GraphicSettings.value - 1, true);
         Debug.Log("La configuracion ha cambiado ha: " + QualitySettings.names[GraphicSettings.value - 1]);
+    }
+    public void Play()
+    {
+        PantallaDeCarga.Instancia.CargarEscena(Escenas.Nivel1.ToString());
     }
 
     public void Quit()

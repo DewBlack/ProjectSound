@@ -31,15 +31,21 @@ public class BackgroundMenu : MonoBehaviour {
     private void MoveLevels()
     {
         transform.Translate(transform.right * -vel);
-
-        Debug.Log(transform.position.x + " " + (transform.position.x <= (size / LevelChilds.Length) * (currentlyLevel + 1)));
-        if (transform.position.x <= (size /LevelChilds.Length)*(currentlyLevel + 1))
+        
+        if (transform.position.x <= size)
         {
-           
-            StartCoroutine(Difumine(LevelChilds[currentlyLevel]));
-            currentlyLevel++;
-            StartCoroutine(Fumine(LevelChilds[currentlyLevel]));
-        }  
+            var pos = transform.position;
+            pos.x = 0;
+            transform.position = pos;
+            StartCoroutine(Difumine(LevelChilds[1]));
+            StartCoroutine(Fumine(LevelChilds[0]));
+        }
+        if (transform.position.x <= (size /LevelChilds.Length))
+        {           
+            StartCoroutine(Difumine(LevelChilds[0]));
+            StartCoroutine(Fumine(LevelChilds[1]));
+        }
+       
     }
 
     private IEnumerator Difumine(SpriteRenderer level)
@@ -48,6 +54,7 @@ public class BackgroundMenu : MonoBehaviour {
         while (c.a > 0)
         {            
             c.a -= difumineVel;
+            level.color = c;
             yield return null;
         }
     }
@@ -58,6 +65,7 @@ public class BackgroundMenu : MonoBehaviour {
         while (c.a < 1)
         {
             c.a += difumineVel;
+            level.color = c;
             yield return null;
         }
     }

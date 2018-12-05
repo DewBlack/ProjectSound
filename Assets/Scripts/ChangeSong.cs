@@ -22,7 +22,7 @@ public class ChangeSong : MonoBehaviour {
     {
         if (maxSongs == 0) return;
         
-        int aux = (SongPlaying + 1 >= maxSongs) ? 0 : SongPlaying + 1;
+        int aux = (SongPlaying + 1 > maxSongs) ? 0 : SongPlaying + 1;
 
         audios[SongPlaying].Stop();
         SongPlaying = aux;

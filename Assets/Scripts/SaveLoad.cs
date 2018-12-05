@@ -7,6 +7,7 @@ public class SaveLoad : MonoBehaviour {
 
     public bool initLoad;
     public bool deleteSaved;
+    public static PhoneController Phone;
     public static GameObject character;
     public static ChangeSong Songs;
     public static GameObject SongIcon1;
@@ -19,6 +20,12 @@ public class SaveLoad : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         character = GameObject.FindGameObjectWithTag("Player");
         Songs = GameObject.FindGameObjectWithTag("Level").GetComponent<ChangeSong>();
+        
+        if (Songs == null)
+        {
+            Songs = GameObject.Find("Nivel2").GetComponent<ChangeSong>();
+            Debug.LogError("ERROR: CANT FIND A LEVEL OBJECT");
+        }        Phone = GameObject.FindGameObjectWithTag("Phone").GetComponent<PhoneController>();
         GameObject[] list = GameObject.FindGameObjectsWithTag("songIcons");
         switch(list.Length)
         {
@@ -69,7 +76,11 @@ public class SaveLoad : MonoBehaviour {
             SongIcon2.SetActive((PlayerPrefs.GetInt("songEnable2") == 1) ? true : false);
         if (PlayerPrefs.HasKey("maxSongs"))
             Songs.maxSongs = PlayerPrefs.GetInt("maxSongs");
+        if (PlayerPrefs.HasKey("volumeSong"))
+            Phone.volumen = PlayerPrefs.GetFloat("VolumeSong");
 
+        Phone.ChangeVolume(0f);
+        Songs.UpdateLevel();
     }
     private static bool LoadPosition()
     {
@@ -88,6 +99,7 @@ public class SaveLoad : MonoBehaviour {
     {
         PlayerPrefs.SetFloat("position_x", character.transform.position.x);
         PlayerPrefs.SetFloat("position_y", character.transform.position.y);
+        Debug.Log(character.transform.position);
         PlayerPrefs.SetInt("currentSong", Songs.SongPlaying);
         PlayerPrefs.SetFloat("timeSong", Songs.audios[Songs.SongPlaying].time);
         if(SongIcon1 != null)
@@ -95,6 +107,7 @@ public class SaveLoad : MonoBehaviour {
         if(SongIcon2 != null)
             PlayerPrefs.SetInt("songEnable2", (SongIcon2.activeSelf) ? 1 : 0);
         PlayerPrefs.SetInt("maxSongs", Songs.maxSongs);
+        PlayerPrefs.SetFloat("volumeSong", Phone.volumen);
 
     }
 }

@@ -12,7 +12,6 @@ namespace Invector.CharacterController
         [Header("Default Inputs")]
         public string horizontalInput = "Horizontal";
         public KeyCode jumpInput = KeyCode.Space;
-        public KeyCode lookPhoneInput = KeyCode.Tab;
         
         protected vThirdPersonController cc;                // access the ThirdPersonController component                
 
@@ -49,7 +48,6 @@ namespace Invector.CharacterController
         protected virtual void InputHandle()
         {
             MoveCharacter();
-            LookPhoneInput();
             JumpInput();
         }
 
@@ -58,13 +56,7 @@ namespace Invector.CharacterController
         protected virtual void MoveCharacter()
         {            
             cc.input.x = Input.GetAxis(horizontalInput);
-        }
-
-        protected virtual void LookPhoneInput()
-        {
-            if (Input.GetKeyDown(lookPhoneInput))
-                cc.LookPhone();
-        }       
+        }        
 
         protected virtual void JumpInput()
         {

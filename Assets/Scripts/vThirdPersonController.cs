@@ -17,7 +17,7 @@ namespace Invector.CharacterController
         public virtual void Jump()
         {
             // conditions to do this action
-            bool jumpConditions = isGrounded && !isJumping && !isLookingPhone; 
+            bool jumpConditions = isGrounded && !isJumping;
             // return if jumpCondigions is false
             if (!jumpConditions) return;
             // trigger jump behaviour
@@ -25,16 +25,7 @@ namespace Invector.CharacterController
             animator.SetTrigger("Jumping");
             isJumping = true;   
         }
-        public virtual void LookPhone()
-        {
-            // conditions to do this action
-            bool lookPhoneConditions = isGrounded && !isJumping && _rigidbody2D.velocity == Vector2.zero;
-
-            if (!lookPhoneConditions) return;
-
-            isLookingPhone = !isLookingPhone;
-            animator.SetBool("LookPhone", isLookingPhone);
-        }
+        
     }
     
 }

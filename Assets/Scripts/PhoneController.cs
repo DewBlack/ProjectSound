@@ -46,6 +46,8 @@ public class PhoneController : MonoBehaviour {
     public Image phoneIMG;
     [Range(25, 100)]
     public float volumen;
+    public GameObject HUD;
+    public GameObject redCircle;
 
     public KeyCode pauseInput = KeyCode.Escape;
 
@@ -72,7 +74,6 @@ public class PhoneController : MonoBehaviour {
                 DisablePhone();
             else
                 ActivePhone();
-            Debug.Log("Entra");
         }
     }
 
@@ -80,7 +81,7 @@ public class PhoneController : MonoBehaviour {
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
+        HUD.SetActive(false);
         gameObject.GetComponent<Canvas>().enabled = true;
         player.GetComponent<vThirdPersonInput>().enabled = false;
         player.GetComponent<vThirdPersonController>().input = Vector2.zero;
@@ -93,9 +94,12 @@ public class PhoneController : MonoBehaviour {
 
     public void DisablePhone()
     {
+        HUD.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        currently = Screens.Main;
         player.GetComponent<vThirdPersonInput>().enabled = true;
+
         gameObject.GetComponent<Canvas>().enabled = false;
         foreach (var s in screens)
             s.SetActive(false);
@@ -204,9 +208,10 @@ public class PhoneController : MonoBehaviour {
         c.a = 1;
         phoneIMG.color = c;
 
+        redCircle.SetActive(false);
+
         for (int i = 0; i < SMS.Length; i++)
         {
-            Debug.Log(smsRecived + " " + i);
             if (smsRecived > i)
                 SMS[i].SetActive(true);
         }
@@ -245,6 +250,8 @@ public class PhoneController : MonoBehaviour {
                 return Screens.Options_Unhide;
             case 3:
                 return Screens.Controller;
+            case 4:
+                return Screens.SMS;
             default:
                 Debug.LogError("Se ha intetnado ir a la pantalla numero " + i + " que no existe");
                 return Screens.Main;
@@ -257,7 +264,6 @@ public class PhoneController : MonoBehaviour {
         Color c = phoneIMG.color;
         c.a -= 0.1f;
         phoneIMG.color = c;
-        Debug.Log("Difumine");
 
         if (c.a < 0)
         {
@@ -270,8 +276,7 @@ public class PhoneController : MonoBehaviour {
         Color c = phoneIMG.color;
         c.a += 0.1f;
         phoneIMG.color = c;
-        Debug.Log("Fumine");
-
+        
         if (c.a > 1)
         {
             CancelInvoke("FuminePhoneIcon");

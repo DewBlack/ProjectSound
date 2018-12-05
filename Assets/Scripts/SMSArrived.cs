@@ -11,15 +11,13 @@ public class SMSArrived : MonoBehaviour {
 
     public Image phoneIMG;
     public PhoneController phone;
+    public GameObject redCircle;
 
     private void Start()
     {
-        GameObject.Find("Movil");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PhoneController phone = GameObject.FindGameObjectWithTag("Phone").GetComponent<PhoneController>();
-
         if (collision.tag == "Player" && phone.smsRecived == Message)        {
 
             if (phone.smsRecived == Message)
@@ -27,6 +25,8 @@ public class SMSArrived : MonoBehaviour {
                 phone.smsRecived++;
                 phoneIMG.sprite = notification;
                 phone.MessageArrived();
+                redCircle.SetActive(true);
+                
             }
             else
                 Debug.LogError("ERROR: Try to send a sms when already sent ir");

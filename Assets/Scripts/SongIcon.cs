@@ -5,6 +5,7 @@ using UnityEngine;
 public class SongIcon : MonoBehaviour {
 
     public GameObject Level;
+    public int numsongs;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,7 @@ public class SongIcon : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            Level.GetComponent<ChangeSong>().maxSongs++;
+            Level.GetComponent<ChangeSong>().maxSongs = numsongs;
             gameObject.SetActive(false);
         }
 

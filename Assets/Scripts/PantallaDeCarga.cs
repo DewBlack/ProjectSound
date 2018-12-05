@@ -45,6 +45,12 @@ public class PantallaDeCarga : MonoBehaviour {
         StartCoroutine(GirarCascos());
     }
 
+    public void CargarEscena(int numeroEscena)
+    {        
+        StartCoroutine(MostrarPantallaDeCarga(SceneManager.GetSceneAt(numeroEscena).ToString()));
+        StartCoroutine(GirarCascos());
+    }
+
     private IEnumerator MostrarPantallaDeCarga(string nombreEscena)
     {
         imagenDeCarga.gameObject.SetActive(true);

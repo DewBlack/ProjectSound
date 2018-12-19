@@ -11,16 +11,18 @@ public class BackgroundMenu : MonoBehaviour {
     public float size = -65;
     public int currentlyLevel;
     public float difumineVel;
+    public int i;
 
     // Use this for initialization
     void Start() {
         DifumineAll();
         InvokeRepeating("MoveLevels", 0, vel);
+        i = 0;
     }
 
     private void DifumineAll()
     {
-        for(int i=1; i < LevelChilds.Length;i++)
+        for(int i=1; i < LevelChilds.Length; i++)
         {
             Color c = LevelChilds[i].color;
             c.a = 0;
@@ -34,16 +36,19 @@ public class BackgroundMenu : MonoBehaviour {
         
         if (transform.position.x <= size)
         {
+            
             var pos = transform.position;
             pos.x = 0;
+            i = 0;
             transform.position = pos;
-            StartCoroutine(Difumine(LevelChilds[1]));
-            StartCoroutine(Fumine(LevelChilds[0]));
+            StartCoroutine(Difumine(LevelChilds[i]));
+            StartCoroutine(Fumine(LevelChilds[i]));
         }
-        if (transform.position.x <= (size /LevelChilds.Length))
+        if (transform.position.x <= (size /LevelChilds.Length)*(i+1))
         {           
-            StartCoroutine(Difumine(LevelChilds[0]));
-            StartCoroutine(Fumine(LevelChilds[1]));
+            StartCoroutine(Difumine(LevelChilds[i]));
+            i++;
+            StartCoroutine(Fumine(LevelChilds[i]));
         }
        
     }

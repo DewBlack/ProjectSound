@@ -12,6 +12,8 @@ TagManager:
   - Corredor
   - SongPlataform
   - rotate
+  - Phone
+  - AutoScroll
   layers:
   - Default
   - TransparentFX

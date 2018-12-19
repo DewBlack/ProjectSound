@@ -13,13 +13,14 @@ public class SaveLoad : MonoBehaviour {
     public static GameObject SongIcon1;
     public static GameObject SongIcon2;
     public static GameObject SongIcon3;
-
+    public static GameObject AutoScroll;
 
     // Use this for initialization
     void Start () {
         DontDestroyOnLoad(gameObject);
         character = GameObject.FindGameObjectWithTag("Player");
         Songs = GameObject.FindGameObjectWithTag("Level").GetComponent<ChangeSong>();
+        AutoScroll = GameObject.FindGameObjectWithTag("AutoScroll");
         
         if (Songs == null)
         {
@@ -64,8 +65,8 @@ public class SaveLoad : MonoBehaviour {
     public static void LoadGameData()
     {
 
-        if (!LoadPosition())
-            Debug.LogError("No se ha podido cargar la posicion");
+        if (!LoadPositionCharacter())
+            Debug.LogError("No se ha podido cargar la posicion del personaje");
         if (PlayerPrefs.HasKey("currentSong"))
             Songs.UptadeSong(PlayerPrefs.GetInt("currentSong"));
         if (PlayerPrefs.HasKey("timeSong"))
@@ -78,11 +79,19 @@ public class SaveLoad : MonoBehaviour {
             Songs.maxSongs = PlayerPrefs.GetInt("maxSongs");
         if (PlayerPrefs.HasKey("volumeSong"))
             Phone.volumen = PlayerPrefs.GetFloat("VolumeSong");
-
+        if (PlayerPrefs.HasKey("isPlaying"))
+            Songs.LoadisPlaying(PlayerPrefs.GetInt("isPlaying") == 1);
+        if(AutoScroll != null)
+        {
+           if(!LoadPositionAutoScroll())
+                Debug.LogError("No se ha podido cargar la posicion del Autoscroll");
+        }
+        else
+            Debug.LogError("No existe el GO Autoscroll ");
         Phone.ChangeVolume(0f);
         Songs.UpdateLevel();
     }
-    private static bool LoadPosition()
+    private static bool LoadPositionCharacter()
     {
         Vector3 position = character.transform.position;
         if (PlayerPrefs.HasKey("position_x") && PlayerPrefs.HasKey("position_y"))
@@ -95,12 +104,25 @@ public class SaveLoad : MonoBehaviour {
         character.transform.position = position;
         return true;
     }
+    private static bool LoadPositionAutoScroll()
+    {
+        Vector3 position = AutoScroll.transform.position;
+        if (PlayerPrefs.HasKey("AutoScroll_position_x") && PlayerPrefs.HasKey("AutoScroll_position_y"))
+        { 
+                position.x = PlayerPrefs.GetFloat("AutoScroll_position_x");
+                position.y = PlayerPrefs.GetFloat("AutoScroll_position_y");
+        }
+        else
+            return false;
+        AutoScroll.transform.position = position;
+        return true;
+    }
     public static void SaveGameData()
     {
         PlayerPrefs.SetFloat("position_x", character.transform.position.x);
         PlayerPrefs.SetFloat("position_y", character.transform.position.y);
-        Debug.Log(character.transform.position);
         PlayerPrefs.SetInt("currentSong", Songs.SongPlaying);
+        PlayerPrefs.SetInt("isPlaying", (Songs.audios[0].isPlaying)? 1:0);
         PlayerPrefs.SetFloat("timeSong", Songs.audios[Songs.SongPlaying].time);
         if(SongIcon1 != null)
             PlayerPrefs.SetInt("songEnable1", (SongIcon1.activeSelf) ? 1 : 0);
@@ -108,6 +130,11 @@ public class SaveLoad : MonoBehaviour {
             PlayerPrefs.SetInt("songEnable2", (SongIcon2.activeSelf) ? 1 : 0);
         PlayerPrefs.SetInt("maxSongs", Songs.maxSongs);
         PlayerPrefs.SetFloat("volumeSong", Phone.volumen);
+        if(AutoScroll != null)
+        {
+            PlayerPrefs.SetFloat("AutoScroll_position_x", AutoScroll.transform.position.x);
+            PlayerPrefs.SetFloat("AutoScroll_position_y", AutoScroll.transform.position.y);
+        }
 
     }
 }

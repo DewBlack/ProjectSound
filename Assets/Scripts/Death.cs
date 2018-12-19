@@ -22,20 +22,19 @@ public class Death : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            if (!play)
-            {
-                Deathsound.Play();
-                play = true;
-            }
-            else if(!Deathsound.isPlaying)
-            {
+                if (!play)
+                {
+                    Deathsound.Play();
+                    play = true;
+                }
+                else if (!Deathsound.isPlaying)
+                {
 
-                Debug.Log("Cargando");
-                SaveLoad.LoadGameData();
-                Debug.Log("Cargado");
+                    Debug.Log("Cargando");
+                    SaveLoad.LoadGameData();
+                    Debug.Log("Cargado");
 
-            }
-        
-        }
+                }
+        }       
     }
 }

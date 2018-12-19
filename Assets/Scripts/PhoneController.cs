@@ -63,6 +63,9 @@ public class PhoneController : MonoBehaviour {
         Brillo.onValueChanged.AddListener(delegate { SlideShine(); }); //Sergi
         Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); }); //Sergi
         GraphicSettings.onValueChanged.AddListener(delegate { QualitySettingsUpdate(); });
+        GraphicSettings.value = QualitySettings.GetQualityLevel() + 1;
+        Windowed.GetComponent<Image>().sprite = buttons[1];
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

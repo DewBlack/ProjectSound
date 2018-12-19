@@ -100,14 +100,15 @@ namespace Invector.CharacterController
 
         [HideInInspector]
         public Vector2 input;                               // generate input for the controller        
-        [HideInInspector]
+        //[HideInInspector]
         public float speed;    // general variables to the locomotion
-        [HideInInspector]
+        //[HideInInspector]
         public float velocity;                              // velocity to apply to rigidbody    
-        [HideInInspector]
+        //[HideInInspector]
         public Vector2 maxSpeed;
         [HideInInspector]
         public Vector2 scale;
+        public float vel;
 
         #endregion
 
@@ -170,7 +171,7 @@ namespace Invector.CharacterController
                         scale.x = scale.x < 0 ? scale.x : -scale.x;
                         transform.localScale = scale;
                     }
-                    _rigidbody2D.velocity = new Vector2(speed * 7f, _rigidbody2D.velocity.y);
+                    _rigidbody2D.velocity = new Vector2(speed * vel, _rigidbody2D.velocity.y);
                 }
             }
 

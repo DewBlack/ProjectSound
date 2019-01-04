@@ -3,6 +3,13 @@ guid: b50212b11fe7f004e8a9270252677554
 TextureImporter:
   fileIDToRecycleName:
     21300000: N1-Blanco2.0_0
+    21300002: N1-Blanco2.0_1
+    21300004: N1-Blanco2.0_2
+    21300006: N1-Blanco2.0_5
+    21300008: N1-Blanco2.0_9
+    21300010: N1-Blanco2.0_10
+    21300012: N1-Blanco2.0_11
+    21300014: N1-Blanco2.0_14
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -96,46 +103,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: N1-Blanco2.0_0
+      name: N1-Blanco2.0_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6000
-        height: 477
+        width: 628
+        height: 473
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 4}
-      outline:
-      - - {x: -3000, y: 238.5}
-        - {x: -3000, y: -238.5}
-        - {x: -2367.1875, y: -238.5}
-        - {x: -2367.1875, y: 235.89743}
-        - {x: -2370.1172, y: 238.5}
-      - - {x: -2141.6016, y: 238.5}
-        - {x: -2323.2422, y: 238.5}
-        - {x: -2323.2422, y: -86.446884}
-        - {x: -2320.3125, y: -238.5}
-        - {x: -2144.5312, y: -238.5}
-        - {x: -2141.6016, y: -10.256411}
-      - - {x: -2100.586, y: 238.5}
-        - {x: -2100.586, y: 7.3260074}
-        - {x: -2097.6562, y: -238.5}
-        - {x: -1968.75, y: -238.5}
-        - {x: -1965.8203, y: 224.17583}
-        - {x: -1965.8203, y: 238.5}
-      - - {x: -1828.125, y: -238.5}
-        - {x: -1828.125, y: 238.5}
-        - {x: -1918.9453, y: 238.5}
-        - {x: -1918.9453, y: -238.5}
-      - - {x: -1209.9609, y: 238.5}
-        - {x: -1209.9609, y: -238.5}
-        - {x: 3000, y: -238.5}
-        - {x: 3000, y: 238.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e624593cb1852424c9a14b52606d1c88
+      spriteID: 82acfd599e65dd0428e570f7579a6f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_2
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 853
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd12ee4d75cf69f4ba7ae026754ffcbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_5
+      rect:
+        serializedVersion: 2
+        x: 3578
+        y: 604
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c6fc4dfb1f1234097a7090b6597f1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_9
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 0
+        width: 173
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69ce07c623c9e2469edb7105042d6ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_10
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 126
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c61d3272cb1524b87cc30495ac8c28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_11
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 0
+        width: 82
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e617304ebaaa54198d7c4719301102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1-Blanco2.0_14
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 0
+        width: 4210
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e489e05d48ca49d4b9813b00a64c94fc
       vertices: []
       indices: 
       edges: []

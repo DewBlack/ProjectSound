@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\asdasd.cs" />
     <Compile Include="Assets\Downloads\Anima2D\Examples\Scripts\CharacterMotion.cs" />
     <Compile Include="Assets\Downloads\Anima2D\Examples\Scripts\Follow.cs" />
     <Compile Include="Assets\Downloads\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
@@ -95,11 +96,15 @@
     <Compile Include="Assets\Scripts\ChineamticFireWood.cs" />
     <Compile Include="Assets\Scripts\CorredorPuto.cs" />
     <Compile Include="Assets\Scripts\Death.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\guitarristaSong.cs" />
     <Compile Include="Assets\Scripts\LookAtNPCs.cs" />
     <Compile Include="Assets\Scripts\ManagerLevel2.cs" />
     <Compile Include="Assets\Scripts\MensajesEmergentes.cs" />
     <Compile Include="Assets\Scripts\Moving.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript1.cs" />
     <Compile Include="Assets\Scripts\newSong.cs" />
     <Compile Include="Assets\Scripts\PantallaDeCarga.cs" />
     <Compile Include="Assets\Scripts\PhoneController.cs" />

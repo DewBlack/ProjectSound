@@ -164,12 +164,12 @@ namespace Invector.CharacterController
                     if (speed < 0)
                     {
                         scale.x = scale.x < 0 ? -scale.x : scale.x;
-                        transform.localScale = scale;
+                        transform.localScale = new Vector3(scale.x, scale.y, transform.localScale.z);
                     }
                     else
                     {
                         scale.x = scale.x < 0 ? scale.x : -scale.x;
-                        transform.localScale = scale;
+                        transform.localScale = new Vector3(scale.x, scale.y, transform.localScale.z);
                     }
                     _rigidbody2D.velocity = new Vector2(speed * vel, _rigidbody2D.velocity.y);
                 }

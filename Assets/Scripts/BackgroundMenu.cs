@@ -36,7 +36,6 @@ public class BackgroundMenu : MonoBehaviour {
         
         if (transform.position.x <= size)
         {
-            
             var pos = transform.position;
             pos.x = 0;
             i = 0;

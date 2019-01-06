@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public struct Pair
 {
     readonly int a;
@@ -12,14 +13,13 @@ public struct Pair
 [System.Serializable]
 public class Dialogue
 {
-    public string name;
     public Reply[] reply; 
 
     [TextArea(3,10)]
     public string[] sentences;
 }
-[System.Serializable]
 
+[System.Serializable]
 public class Reply
 {
     [TextArea(3,10)]

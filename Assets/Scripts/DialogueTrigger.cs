@@ -8,6 +8,15 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialouge);
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonMotor>().stoped = true;
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonMotor>().input = Vector2.zero;
+            TriggerDialogue();
+        }
     }
 }

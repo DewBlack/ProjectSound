@@ -109,6 +109,7 @@ namespace Invector.CharacterController
         [HideInInspector]
         public Vector2 scale;
         public float vel;
+        public bool stoped;
 
         #endregion
 
@@ -153,6 +154,9 @@ namespace Invector.CharacterController
         public virtual void FreeMovement()
         {
             // set speed to both vertical and horizontal inputs
+            if (stoped)
+                return;
+
             speed = input.x;
             speed = Mathf.Clamp(speed, -1f, 1f);
             maxSpeed = new Vector2(10, 5);

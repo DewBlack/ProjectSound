@@ -4,8 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using System;
-
-
+using Invector.CharacterController;
 
 public class DialogueManager : MonoBehaviour {
  
@@ -16,6 +15,8 @@ public class DialogueManager : MonoBehaviour {
     private Queue<Reply> reply;
     public Button[] replyButtons;
     public Canvas canvas;
+    public vThirdPersonMotor player;
+
     // Use this for initialization
     void Start()
     {
@@ -38,9 +39,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
         canvas.gameObject.SetActive(true);
-        nameText.text = dialogue.name;
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -75,20 +74,22 @@ public class DialogueManager : MonoBehaviour {
             return;
         }
         string sentence = sentences.Dequeue();
+        Debug.Log(sentence.IndexOf(" ") + 1);
+        nameText.text = sentence.Substring(0, sentence.IndexOf(" "));
         StopCoroutine("TypeSentece");
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(sentence.Substring(sentence.IndexOf("\n")+1)));
     }
-
     IEnumerator TypeSentence(string sentence)
     {
         bool vuton = false;
-        if (sentence.Substring(0, "reply-".Length) == "reply-")
+        int aux = sentence.IndexOf("-");
+        if (aux >= 1 && sentence.Substring(0, aux) == "reply-")
             vuton = true;
         dialogueText.text = "";
 
         if (vuton)
         {
-            foreach (char letter in sentence.Substring("reply-".Length).ToCharArray())
+            foreach (char letter in sentence.Substring(sentence.IndexOf("-")).ToCharArray())
             {
                 dialogueText.text += letter;
                 yield return null;
@@ -123,7 +124,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndDialogue()
     {
-        Debug.Log("End of Dialogue");
+        player.stoped = false;
         canvas.gameObject.SetActive(false);
     }
 }

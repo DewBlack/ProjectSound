@@ -9,7 +9,10 @@ public enum Escenas
     Nivel1,
     Nivel2,
     Nivel3,
-    Nivel4
+    Nivel4,
+    Nivel5,
+    Nivel6,
+    Credits
 }
 
 public class CambiarEscenas : MonoBehaviour {
@@ -18,6 +21,7 @@ public class CambiarEscenas : MonoBehaviour {
 
     public void OnPointerClick()
     {
+        PlayerPrefs.SetInt("Continue", (int)cargarEscena);
         PantallaDeCarga.Instancia.CargarEscena(cargarEscena.ToString());        
     }
 

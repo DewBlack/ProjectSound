@@ -6,12 +6,22 @@ public class Death : MonoBehaviour {
 
     public AudioSource Deathsound;
     public bool play;
+    public bool startHate;
+    public Dialogue dialogue;
+    private bool existDialogue;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
+
+        existDialogue = GetComponent<ManagerLevel2>() != null;
+        if (existDialogue)
+        {
+            dialogue = GetComponent<ManagerLevel2>().dialogue;
+            Destroy(GetComponent<ManagerLevel2>());
+        }
         Deathsound = GetComponent<AudioSource>();
         play = false;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -32,6 +42,8 @@ public class Death : MonoBehaviour {
 
                     Debug.Log("Cargando");
                     SaveLoad.LoadGameData();
+                    if(existDialogue)
+                        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                     Debug.Log("Cargado");
 
                 }

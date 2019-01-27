@@ -90,6 +90,8 @@ public class ChangeSong : MonoBehaviour
     }
     public virtual void UpdateLevel()
     {
+        if (levels.Length == 0)
+            return;
         foreach (var go in levels)
             go.SetActive(false);
         levels[SongPlaying].SetActive(true);

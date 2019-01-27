@@ -13,7 +13,11 @@ namespace Invector.CharacterController
         {
 
         }
-        
+        private void Update()
+        {
+
+        }
+
         public virtual void Jump()
         {
             // conditions to do this action

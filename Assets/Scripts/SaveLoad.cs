@@ -14,6 +14,9 @@ public class SaveLoad : MonoBehaviour {
     public static GameObject SongIcon2;
     public static GameObject SongIcon3;
     public static GameObject AutoScroll;
+    public static DialogueManager DialogueManager;
+    public static DialogueTrigger[] trigers;
+
 
     // Use this for initialization
     void Start () {
@@ -21,12 +24,14 @@ public class SaveLoad : MonoBehaviour {
         character = GameObject.FindGameObjectWithTag("Player");
         Songs = GameObject.FindGameObjectWithTag("Level").GetComponent<ChangeSong>();
         AutoScroll = GameObject.FindGameObjectWithTag("AutoScroll");
-        
+        DialogueManager = FindObjectOfType<DialogueManager>();
+        trigers = FindObjectsOfType<DialogueTrigger>();
         if (Songs == null)
         {
             Songs = GameObject.Find("Nivel2").GetComponent<ChangeSong>();
             Debug.LogError("ERROR: CANT FIND A LEVEL OBJECT");
-        }        Phone = GameObject.FindGameObjectWithTag("Phone").GetComponent<PhoneController>();
+        }
+        Phone = GameObject.FindGameObjectWithTag("Phone").GetComponent<PhoneController>();
         GameObject[] list = GameObject.FindGameObjectsWithTag("songIcons");
         switch(list.Length)
         {
@@ -50,7 +55,6 @@ public class SaveLoad : MonoBehaviour {
             LoadGameData();
         if (deleteSaved)
             deleteSavedData();
-
     }
 	
 	// Update is called once per frame
@@ -64,7 +68,8 @@ public class SaveLoad : MonoBehaviour {
     }
     public static void LoadGameData()
     {
-
+        if (DialogueManager.nameText.text != "")
+            DialogueManager.EndDialogue();
         if (!LoadPositionCharacter())
             Debug.LogError("No se ha podido cargar la posicion del personaje");
         if (PlayerPrefs.HasKey("currentSong"))
@@ -87,9 +92,18 @@ public class SaveLoad : MonoBehaviour {
                 Debug.LogError("No se ha podido cargar la posicion del Autoscroll");
         }
         else
-            Debug.LogError("No existe el GO Autoscroll ");
+            Debug.LogError("ERROR: No existe el GO Autoscroll ");
+        LoadDialogues();
         Phone.ChangeVolume(0f);
         Songs.UpdateLevel();
+    }
+    private static void LoadDialogues()
+    {
+        for (int i = 0; i < trigers.Length; i++)
+        {
+            if (PlayerPrefs.HasKey("DialogueTrigger_" + i))
+                trigers[i].trigger = PlayerPrefs.GetInt("DialogueTrigger_" + i) == 1 ? true : false;
+        }
     }
     private static bool LoadPositionCharacter()
     {
@@ -135,6 +149,15 @@ public class SaveLoad : MonoBehaviour {
             PlayerPrefs.SetFloat("AutoScroll_position_x", AutoScroll.transform.position.x);
             PlayerPrefs.SetFloat("AutoScroll_position_y", AutoScroll.transform.position.y);
         }
-
+        SaveDialogues();
     }
+    static private void SaveDialogues()
+    {
+        trigers = FindObjectsOfType<DialogueTrigger>();
+        for (int i=0; i< trigers.Length; i++)
+        {
+            PlayerPrefs.SetInt("DialogueTrigger_" + i, trigers[i].trigger ? 1 : 0);
+        }
+    }
+ 
 }

@@ -4,19 +4,35 @@ using System.Collections;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialouge;
-
+    public bool trigger;
+    public Follow t;
+   
     public void TriggerDialogue()
     {
+        FindObjectOfType<PhoneController>().FixedHeadphones();
         FindObjectOfType<DialogueManager>().StartDialogue(dialouge);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(trigger && collision.tag == "Player")
         {
-            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonMotor>().stoped = true;
-            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonMotor>().input = Vector2.zero;
+            FindObjectOfType<DialogueManager>().EndDialogue();
+            trigger = false;
+
+            if (t)
+                t.Enableded();
+            else
+                Debug.Log("XD");
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonController>().input = Vector2.zero;
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonController>()._rigidbody2D.velocity = Vector2.zero;
+            collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonController>().StopAnimations();
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             TriggerDialogue();
         }
     }
+    
 }

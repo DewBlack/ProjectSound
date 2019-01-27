@@ -8,9 +8,9 @@ namespace Invector.CharacterController
         {
 
         }
+
         public void OnAnimatorMove()
         {
-
             if (!isGrounded)
                 if (_rigidbody2D.velocity.y <= 0)
                     animator.SetBool("Falling", true);
@@ -18,7 +18,12 @@ namespace Invector.CharacterController
                 animator.SetBool("Walking", true);
             else
                 animator.SetBool("Walking", false);
+        }
 
+        public void StopAnimations()
+        {
+            animator.SetBool("Falling", false);
+            animator.SetBool("Walking", false);
         }
     }
    

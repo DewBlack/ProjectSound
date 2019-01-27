@@ -15,7 +15,6 @@ public class ChineamticDeath : MonoBehaviour {
     private vThirdPersonController controller;
     private vThirdPersonInput input;
 
-
     // Use this for initialization
     void Start () {
 	}
@@ -62,8 +61,9 @@ public class ChineamticDeath : MonoBehaviour {
             controller.enabled = false;
             controller.input = Vector2.zero;
             input.enabled = false;
+
+            Corredores.SetActive(true);
+            InvokeRepeating("Oscurecer", 0, 0.2f);
         }
-        Corredores.SetActive(true);
-        InvokeRepeating("Oscurecer", 0, 0.2f);
     }
 }

@@ -56,6 +56,7 @@ public class PhoneController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+    
         volumen = 100;
         AudioListener.volume = 1;
         DisablePhone();
@@ -108,7 +109,7 @@ public class PhoneController : MonoBehaviour {
             s.SetActive(false);
 
     }
-
+    
     public void BackButton()
     {
         if (currently != Screens.Main)
@@ -286,5 +287,14 @@ public class PhoneController : MonoBehaviour {
             InvokeRepeating("DifuminePhoneIcon", 0, 0.1f);
         }
     }
-
+    public void BreakHeadphones()
+    {
+        foreach (AudioSource audio in Songs.audios)
+            audio.panStereo = -1f;
+    }
+    public void FixedHeadphones()
+    {
+        foreach (AudioSource audio in Songs.audios)
+            audio.panStereo = 0f;
+    }
 }

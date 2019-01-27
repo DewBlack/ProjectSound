@@ -14,9 +14,11 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> sentences;
     private Queue<Reply> reply;
     public Button[] replyButtons;
+    public TextMeshProUGUI[] replyText;
     public Canvas canvas;
     public vThirdPersonMotor player;
-
+    public float speed;
+    private Coroutine c;
     // Use this for initialization
     void Start()
     {
@@ -33,8 +35,12 @@ public class DialogueManager : MonoBehaviour {
 
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(1) && nameText.text != "" && first && !replyButtons[0].gameObject.activeSelf)
+        {
+            StopCoroutine(c);
             DisplayNextSentece();
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -56,43 +62,36 @@ public class DialogueManager : MonoBehaviour {
                 reply.Enqueue(answer);
             }
         }
-        
+        first = false;
         DisplayNextSentece();
-        first = true;
     }
 
     public void DisplayNextSentece()
     {
-        foreach (Button b in replyButtons)
-        {
-            b.interactable = true;
+        foreach (Button b in replyButtons)        
             b.gameObject.SetActive(false);
-        }
+        
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence.IndexOf(" ") + 1);
-        nameText.text = sentence.Substring(0, sentence.IndexOf(" "));
-        StopCoroutine("TypeSentece");
-        StartCoroutine(TypeSentence(sentence.Substring(sentence.IndexOf("\n")+1)));
+        Debug.Log(sentence.IndexOf("\n") + 1);
+        nameText.text = sentence.Substring(0, sentence.IndexOf("\n"));
+        c = StartCoroutine(TypeSentence(sentence.Substring(sentence.IndexOf("\n") + 1)));
+        first = true;
     }
     IEnumerator TypeSentence(string sentence)
     {
-        bool vuton = false;
-        int aux = sentence.IndexOf("-");
-        if (aux >= 1 && sentence.Substring(0, aux) == "reply-")
-            vuton = true;
+        int aux = sentence.IndexOf("-") + 1;
         dialogueText.text = "";
-
-        if (vuton)
+        if (aux > 1 && sentence.Substring(0, aux) == "reply-")
         {
-            foreach (char letter in sentence.Substring(sentence.IndexOf("-")).ToCharArray())
+            foreach (char letter in sentence.Substring(aux).ToCharArray())
             {
                 dialogueText.text += letter;
-                yield return null;
+                yield return new WaitForSeconds(speed);
             }
             CreateButtons();
         }
@@ -101,30 +100,37 @@ public class DialogueManager : MonoBehaviour {
             foreach (char letter in sentence.ToCharArray())
             {
                 dialogueText.text += letter;
-                yield return null;
+                yield return new WaitForSeconds(speed);
             }
         }
+
     }
 
     public void CreateButtons()
     {
         if (reply.Count == 0)
             Debug.LogError("Se esta intentando acceder a una respuesta que no esta inicializada ni guardada en la Queue");
+
         Reply r = reply.Dequeue();
+
         for (int i = 0; i < r.replys.Length; i++)
-        {
-            // replyButtons[i].gameObject.SetActive(true);
-
-            if (r.Bloqued[i])
-                replyButtons[i].interactable = false;
-
+        {            
+            replyButtons[i].interactable = !r.Bloqued[i];
+            replyText[i].text = r.replys[i];
             replyButtons[i].gameObject.SetActive(true);
         }
     }
 
     public void EndDialogue()
     {
-        player.stoped = false;
+        sentences.Clear();
+        reply.Clear();
+
+        player.gameObject.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         canvas.gameObject.SetActive(false);
     }
 }

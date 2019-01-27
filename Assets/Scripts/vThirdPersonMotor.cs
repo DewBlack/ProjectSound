@@ -154,8 +154,6 @@ namespace Invector.CharacterController
         public virtual void FreeMovement()
         {
             // set speed to both vertical and horizontal inputs
-            if (stoped)
-                return;
 
             speed = input.x;
             speed = Mathf.Clamp(speed, -1f, 1f);
@@ -250,6 +248,7 @@ namespace Invector.CharacterController
            
         }
         #endregion
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag == "songIcons")

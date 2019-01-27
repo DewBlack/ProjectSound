@@ -14,6 +14,10 @@ public class ChineamticFireWood : MonoBehaviour {
     public float[] size;
     public float change;
 
+    public GameObject Dialogue;
+    public float minSize = 0.7940667f;
+    public float normalSize = 1.666667f;
+
     public AudioSource[] song;
     public Transform[] both;
     public float distanceMin;
@@ -53,6 +57,7 @@ public class ChineamticFireWood : MonoBehaviour {
             cam.m_Lens.OrthographicSize -= change;
         else
         {
+            Dialogue.transform.localScale = new Vector3(minSize, minSize, minSize);
             currentlyzoom = Zoom.In;
             CancelInvoke("ZoomIn");
         }
@@ -63,6 +68,7 @@ public class ChineamticFireWood : MonoBehaviour {
             cam.m_Lens.OrthographicSize += change;
         else
         {
+            Dialogue.transform.localScale = new Vector3(normalSize, normalSize, normalSize);
             currentlyzoom = Zoom.Out;
             CancelInvoke("ZoomOut");
         }  

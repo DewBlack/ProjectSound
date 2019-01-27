@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManagerLevel2 : MonoBehaviour {
 
     public GameObject[] Maps;
+    public Dialogue dialogue;
 
 
 	// Use this for initialization
@@ -23,10 +24,13 @@ public class ManagerLevel2 : MonoBehaviour {
         {
             if (!Maps[1].activeSelf)
             {
+                FindObjectOfType<PhoneController>().BreakHeadphones();
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 Maps[0].SetActive(false);
                 Maps[1].SetActive(true);
-            }
 
+            }
         }
     }
+    
 }

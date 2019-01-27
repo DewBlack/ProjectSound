@@ -14,9 +14,12 @@ public class newSong : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            song.Play();
-            Icon.SetActive(false);
-            HUD.SetActive(false);
+            if (song != null)
+                song.Play();
+            if(Icon != null)
+                Icon.SetActive(false);
+                HUD.SetActive(false);
+
             PantallaDeCarga.Instancia.CargarEscena(Next.ToString());
         }
     }

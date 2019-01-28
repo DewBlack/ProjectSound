@@ -6,11 +6,12 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialouge;
     public bool trigger;
     public Follow t;
+    public bool auto;
    
     public void TriggerDialogue()
     {
         FindObjectOfType<PhoneController>().FixedHeadphones();
-        FindObjectOfType<DialogueManager>().StartDialogue(dialouge);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialouge, auto);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,8 +30,8 @@ public class DialogueTrigger : MonoBehaviour
             collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonController>()._rigidbody2D.velocity = Vector2.zero;
             collision.gameObject.GetComponent<Invector.CharacterController.vThirdPersonController>().StopAnimations();
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
             TriggerDialogue();
         }
     }

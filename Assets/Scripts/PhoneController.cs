@@ -49,6 +49,8 @@ public class PhoneController : MonoBehaviour {
     public GameObject HUD;
     public GameObject redCircle;
 
+    private GameObject AutoScroll;
+
     public KeyCode pauseInput = KeyCode.Escape;
 
 
@@ -67,6 +69,7 @@ public class PhoneController : MonoBehaviour {
         GraphicSettings.value = QualitySettings.GetQualityLevel() + 1;
         Windowed.GetComponent<Image>().sprite = buttons[1];
         player = GameObject.FindGameObjectWithTag("Player");
+        AutoScroll = FindObjectOfType<AutoScroll>().gameObject;
     }
 
     // Update is called once per frame
@@ -90,6 +93,8 @@ public class PhoneController : MonoBehaviour {
         player.GetComponent<vThirdPersonInput>().enabled = false;
         player.GetComponent<vThirdPersonController>().input = Vector2.zero;
         player.GetComponent<vThirdPersonController>()._rigidbody2D.velocity = Vector2.zero;
+        if (AutoScroll)
+            AutoScroll.GetComponent<AutoScroll>().vel = 0;
 
         foreach (var s in screens)
             s.SetActive(false);
@@ -103,6 +108,8 @@ public class PhoneController : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         currently = Screens.Main;
         player.GetComponent<vThirdPersonInput>().enabled = true;
+        if (AutoScroll)
+            AutoScroll.GetComponent<AutoScroll>().vel = 0.006f;
 
         gameObject.GetComponent<Canvas>().enabled = false;
         foreach (var s in screens)

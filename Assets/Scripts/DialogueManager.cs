@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour {
     public vThirdPersonMotor player;
     public float speed;
     private Coroutine c;
+    public bool auto;
     // Use this for initialization
     void Start()
     {
@@ -38,15 +39,21 @@ public class DialogueManager : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1) && nameText.text != "" && first && !replyButtons[0].gameObject.activeSelf)
         {
-            StopCoroutine(c);
-            DisplayNextSentece();
+            PressedButton();
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void PressedButton()
+    {
+        StopCoroutine(c);
+        DisplayNextSentece();
+    }
+
+    public void StartDialogue(Dialogue dialogue, bool ao)
     {
         canvas.gameObject.SetActive(true);
         sentences.Clear();
+        auto = ao;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -103,7 +110,10 @@ public class DialogueManager : MonoBehaviour {
                 yield return new WaitForSeconds(speed);
             }
         }
-
+        if (auto)
+        {
+            PressedButton();
+        }
     }
 
     public void CreateButtons()
@@ -128,8 +138,8 @@ public class DialogueManager : MonoBehaviour {
 
         player.gameObject.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = true;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         canvas.gameObject.SetActive(false);
     }

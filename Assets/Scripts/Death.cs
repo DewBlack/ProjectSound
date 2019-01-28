@@ -42,8 +42,8 @@ public class Death : MonoBehaviour {
 
                     Debug.Log("Cargando");
                     SaveLoad.LoadGameData();
-                    if(existDialogue)
-                        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                    if (existDialogue)
+                        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, true);
                     Debug.Log("Cargado");
 
                 }

@@ -25,7 +25,7 @@ public class ManagerLevel2 : MonoBehaviour {
             if (!Maps[1].activeSelf)
             {
                 FindObjectOfType<PhoneController>().BreakHeadphones();
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue, true);
                 Maps[0].SetActive(false);
                 Maps[1].SetActive(true);
 

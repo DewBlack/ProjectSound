@@ -5248,7 +5248,7 @@ Transform:
   m_Children:
   - {fileID: 1124145814}
   m_Father: {fileID: 1973730972}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188693140
 GameObject:
@@ -6481,7 +6481,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507855754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2534.5999, y: 20.40001, z: -106.7}
+  m_LocalPosition: {x: -2533, y: 21.2, z: -106.7}
   m_LocalScale: {x: -1.0251817, y: 1.0251817, z: 1.0251817}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6705,6 +6705,8 @@ MonoBehaviour:
 
       No...'
   trigger: 1
+  t: {fileID: 0}
+  auto: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,7 +6815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2530.121, y: 24.90001, z: -109.799995}
+  m_LocalPosition: {x: -2528.5227, y: 25.7, z: -109.799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1800419192}
@@ -7968,55 +7970,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1581774463}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &696679315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 696679316}
-  - component: {fileID: 696679318}
-  m_Layer: 0
-  m_Name: SentitsDeath
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &696679316
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 696679315}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -214.81773, y: -9.960712, z: -8.496094}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1973730972}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &696679318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 696679315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a14afd95054fe94ab78afb11007bcbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Corredores: {fileID: 0}
-  brillo: {fileID: 0}
-  degradar: 0.01
-  spawn:
-  - {fileID: 0}
-  - {fileID: 0}
-  corredores:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &699696071
 Prefab:
   m_ObjectHideFlags: 0
@@ -14994,6 +14947,8 @@ MonoBehaviour:
     - "Narrador\nHas pensado lo tranquilo que parece el mar para la inmensidad que
       esconde?\r\n"
   trigger: 1
+  t: {fileID: 0}
+  auto: 0
 --- !u!1 &1124807247
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,7 +16483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420913253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2530.121, y: 24.90001, z: -109.799995}
+  m_LocalPosition: {x: -2528.5227, y: 25.7, z: -109.799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 794342948}
@@ -16689,6 +16644,8 @@ MonoBehaviour:
 
       reply-Esa no es la musica del guitarriste de antes?'
   trigger: 1
+  t: {fileID: 0}
+  auto: 0
 --- !u!61 &1462156062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18593,7 +18550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1973730972}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1599298655
 MonoBehaviour:
@@ -18997,89 +18954,129 @@ MonoBehaviour:
     - 'Narrador
 
       Porque no suena por un casco?'
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - "Narrador\n\xBFQue haces?"
     - 'Narrador
 
       Porque no suena??'
-    - "Narrador\nLo est\xE1s haciendo mal"
-    - "Narrador\nEs que eres in\xFAtil"
+    - 'Narrador
+
+      Lo estas haciendo mal'
+    - 'Narrador
+
+      Es que eres inutil'
     - 'Narrador
 
       Eres un fracasado'
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
+    - "Narrador\n\xBFQue haces?"
+    - "Narrador\n\xBF\xA1Que mierdas est\xE1s haciendo!?"
     - 'Narrador
 
       No esperaba menos de ti'
     - 'Narrador
 
       Vuelve a casa'
-    - "Narrador\nEs que eres in\xFAtil"
     - 'Narrador
 
-      Eres un fracasado'
-    - "Narrador\nLo est\xE1s haciendo mal"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\nNadie te quiere\r"
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
-    - 'Narrador
-
-      No esperaba menos de ti'
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nAs\xED no vas a volver a casa"
-    - "Narrador\nLo est\xE1s haciendo mal"
-    - "Narrador\nNadie te quiere\r"
+      Es que eres inutil'
     - 'Narrador
 
       Eres un fracasado'
     - 'Narrador
 
-      Eres un fracasado'
-    - "Narrador\nEs que eres in\xFAtil"
+      Lo estas haciendo mal'
     - 'Narrador
 
-      No esperaba menos de ti'
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
-    - 'Narrador
-
-      No esperaba menos de ti'
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\nEs que eres in\xFAtil"
+      Es que eres inutil'
+    - "Narrador\n\xBFQue haces?"
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\nEs que eres in\xFAtil"
+    - "Narrador\n\xBF\xA1Que mierdas estas haciendo!?"
     - 'Narrador
 
       No esperaba menos de ti'
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Asi no vas a volver a casa'
+    - 'Narrador
+
+      Lo estas haciendo mal'
+    - "Narrador\nNadie te quiere\r"
     - 'Narrador
 
       Eres un fracasado'
-    - "Narrador\nAs\xED no vas a volver a casa"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - 'Narrador
+
+      Eres un fracasado'
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      No esperaba menos de ti'
+    - "Narrador\n\xBF\xA1Que mierdas estas haciendo!?"
+    - 'Narrador
+
+      No esperaba menos de ti'
+    - "Narrador\n\xBFQue haces?"
+    - 'Narrador
+
+      Es que eres inutil'
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - "Narrador\n\xBFQue haces?"
+    - "Narrador\n\xBFQu\xE9 haces?"
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      No esperaba menos de ti'
+    - 'Narrador
+
+      Lo estas haciendo mal'
+    - 'Narrador
+
+      Eres un fracasado'
+    - 'Narrador
+
+      Asi no vas a volver a casa'
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Es que eres inutil'
+    - "Narrador\n\xBFQue haces?"
+    - "Narrador\nNadie te quiere\r"
+    - 'Narrador
+
+      Lo estas haciendo mal'
     - 'Narrador
 
       Lo haces todo mal'
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Es que eres inutil'
+    - "Narrador\n\xBF\xA1Que mierdas estas haciendo!?"
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - "Narrador\n\xBFQue haces?"
     - 'Narrador
 
       No esperaba menos de ti'
     - 'Narrador
 
       No esperaba menos de ti'
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - 'Narrador
+
+      Lo estas haciendo mal'
     - 'Narrador
 
       Lo haces todo mal'
@@ -19100,63 +19097,89 @@ MonoBehaviour:
     - 'Narrador
 
       Eres un fracasado'
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
+    - "Narrador\n\xBFQue haces?"
+    - "Narrador\n\xBF\xA1Que mierdas estas haciendo!?"
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\nEs que eres in\xFAtil"
+    - 'Narrador
+
+      Es que eres inutil'
     - 'Narrador
 
       No esperaba menos de ti'
-    - "Narrador\n\xBFQu\xE9 haces?"
-    - "Narrador\nAs\xED no vas a volver a casa"
-    - "Narrador\n\xBF\xA1Qu\xE9 mierdas est\xE1s haciendo!?"
-    - "Narrador\nAs\xED no vas a volver a casa"
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - "Narrador\n\xBFQue haces?"
+    - 'Narrador
+
+      Asi no vas a volver a casa'
+    - "Narrador\n\xBF\xA1Que mierdas estas haciendo!?"
+    - 'Narrador
+
+      Asi no vas a volver a casa'
+    - "Narrador\n\xBFQue haces?"
     - "Narrador\nNadie te quiere\r"
     - 'Narrador
 
       HAZME CALLAR'
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - 'Narrador
+
+      Lo estas haciendo mal'
     - 'Narrador
 
       No esperaba menos de ti'
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nAs\xED no vas a volver a casa"
-    - "Narrador\nAs\xED no vas a volver a casa"
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Asi no vas a volver a casa'
+    - 'Narrador
+
+      Asi no vas a volver a casa'
     - 'Narrador
 
       Eres un fracasado'
-    - "Narrador\nEs que eres in\xFAtil"
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - 'Narrador
+
+      Es que eres inutil'
+    - 'Narrador
+
+      Lo estas haciendo mal'
     - 'Narrador
 
       Lo haces todo mal'
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\nEs que eres in\xFAtil"
+    - 'Narrador
+
+      Es que eres inutil'
     - 'Narrador
 
       Lo haces todo mal'
     - 'Narrador
 
       No esperaba menos de ti'
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - "Narrador\n\xBFQue haces?"
     - 'Narrador
 
       HAZME CALLAR'
     - 'Narrador
 
       Eres un fracasado'
-    - "Narrador\n\xBFQu\xE9 haces?"
+    - "Narrador\n\xBFQue haces?"
     - 'Narrador
 
       HAZME CALLAR'
-    - "Narrador\nEs que eres in\xFAtil"
+    - 'Narrador
+
+      Es que eres inutil'
     - 'Narrador
 
       HAZME CALLAR'
-    - "Narrador\nLo est\xE1s haciendo mal"
+    - 'Narrador
+
+      Lo estas haciendo mal'
     - "Narrador\nNadie te quiere\r"
-    - "Narrador\nEs que eres in\xFAtil"
+    - 'Narrador
+
+      Es que eres inutil'
     - 'Narrador
 
       HAZME CALLAR'
@@ -20237,10 +20260,9 @@ Transform:
   - {fileID: 1243467844}
   - {fileID: 1389952770}
   - {fileID: 32368671}
-  - {fileID: 696679316}
+  - {fileID: 1599298654}
   - {fileID: 194697006}
   - {fileID: 702034923}
-  - {fileID: 1599298654}
   - {fileID: 161357696}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -21013,6 +21035,8 @@ MonoBehaviour:
 
       Quedate un rato y escucha mi musica, cambia la forma de ver la vida'
   trigger: 1
+  t: {fileID: 0}
+  auto: 0
 --- !u!1 &2026715074
 GameObject:
   m_ObjectHideFlags: 0

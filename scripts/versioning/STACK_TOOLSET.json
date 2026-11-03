@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "shared_source": {
+    "upstream": "https://github.com/pallobbygames/pallobbygames-template",
+    "revision": "d71463589e9b537eddacbe40450b18bdcc300ad3",
+    "manifest_sha256": "3266ffd82c2156efe531d3464ff1854d722d9a1183308c036d5a25d3faaffae8"
+  },
+  "files": {
+    ".gitattributes": "7691f38481273866e44b147707ebcad3d15d813aacbf7220f4eb97edfa75db2d",
+    "android_counter.py": "b12daa216e56a4cbb1eb962e4188764842cc1824dc5ab5e6348be2e6a0a238c0",
+    "stack_version.py": "3e30dd7ac4706e92350564432f5a58c7891d8e3c93de6713a684a0dc190673cf",
+    "vendor/PROVENANCE.json": "4e99a4723d52803888dfd7cd2b9dad7d1c2353628010750551094c5e16b2628f",
+    "vendor/SEMVER-LICENSE.txt": "cc10179de9ced8655d7765bd3a8ac46438a61e663de7cf1c48d502d2baf9f3d5",
+    "vendor/semver/__about__.py": "a6b434cb74b7b13f41c8dd4240fae4ac016bf73affe496af60ca73b4f8ed51fd",
+    "vendor/semver/__init__.py": "451063ea4bae61a098e41f602f1c04d21ee6781c2ead811b7d0667bfbb7590a3",
+    "vendor/semver/__main__.py": "9ac50bab82dbd0057c2b8aee9619b4173cc93bca0c0afe761a37131b6b7c8b0b",
+    "vendor/semver/_deprecated.py": "38e5fe01e698f90a892b6810184f2974913187fd774cffbd012640920a829ade",
+    "vendor/semver/_types.py": "f807dacd98279a631eed6b614b1fccfb0d410a7ab674f166cac8e6b533a6d687",
+    "vendor/semver/cli.py": "1f0be99ea70df791b7388354e1c2e0a2e4470ad5a146cb8a8217e13d6b4639ec",
+    "vendor/semver/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/semver/version.py": "8e963809189c13aa43d07f9a7679c4a90fa68d1911b4c63d5d23edead9de68bf"
+  }
+}

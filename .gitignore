@@ -1,0 +1,8 @@
+
+# Versioning local evidence
+**/__pycache__/
+*.pyc
+/builds/versioning-smoke/
+/versioning-*.log
+/installed-version.json
+/settings-version.png

@@ -1,0 +1,6 @@
+{
+  "upstream": "https://github.com/pallobbygames/studio",
+  "path": "tools/versioning",
+  "revision": "da742bef274d0c14c2bf16af6bdb50ffa68bc602",
+  "manifest_sha256": "a6100e3345709feac12480100d635797ba44c4ed8d1d34acbf7bf706dec42597"
+}

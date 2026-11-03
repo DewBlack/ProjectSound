@@ -13,6 +13,10 @@ public class buttonsMenu : MonoBehaviour {
 
     public void Start()
     {
+        foreach (Transform child in GetComponentsInChildren<Transform>(true))
+        {
+            if (child.name == "Settings") SettingsVersionFooter.Ensure(child);
+        }
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Volumen.onValueChanged.AddListener(delegate { SlideVolumen(); });

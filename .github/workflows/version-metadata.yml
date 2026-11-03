@@ -1,0 +1,26 @@
+name: Version metadata
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ProjectSettings
+            Assets/Versioning
+            Assets/Scripts
+            Assets/Scenes/Main.unity
+            Assets/Menu
+            Assets/Prefabs/MenuPrincipal.prefab
+            scripts
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/versioning/stack_version.py check
+      - run: python -m unittest discover -s scripts/versioning/tests
